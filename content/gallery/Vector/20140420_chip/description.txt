@@ -1,0 +1,1 @@
+This is version two of my website's header, with a little chip/toaster-like robot as the mascot. First sketched in Photoshop, then imported into Illustrator to be lined and colored. I have some progress steps shown below, and even a little study done in Blender to make sure that I have the angle of the little claw right.
