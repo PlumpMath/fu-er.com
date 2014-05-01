@@ -25,6 +25,7 @@ class category : public WContainerWidget
       : name_{ name }
     {
       setStyleClass("gallery_category");
+
       layout_->setSpacing(0);
       layout_->setContentsMargins(0, 0, 0, 0);
       setLayout(layout_);
@@ -42,10 +43,11 @@ class category : public WContainerWidget
       preview_container_->setOverflow(WContainerWidget::OverflowHidden,
                                       Wt::Horizontal);
       layout_->addWidget(preview_container_);
-      preview_container_->setLayout(preview_layout_);
-      preview_container_->setMaximumSize(450, WLength::Auto);
 
       preview_layout_->setSpacing(0);
+
+      preview_container_->setLayout(preview_layout_);
+      //preview_container_->setMaximumSize(450, WLength::Auto);
 
       populate();
     }
@@ -83,7 +85,7 @@ class category : public WContainerWidget
         { ++row; col = 0; }
       }
       preview_layout_->addWidget(step_container);
-      preview_layout_->addSpacing(500);
+      preview_layout_->addSpacing(300);
     }
 
     std::string const& get_name() const

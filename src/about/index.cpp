@@ -18,9 +18,13 @@ about::about()
   body_container->setStyleClass("about");
   auto body_layout(new WVBoxLayout());
   body_layout->setSpacing(0);
+  body_layout->setContentsMargins(0, 0, 0, 0);
   body_container->setLayout(body_layout);
   layout_->addWidget(body_container);
-  body_layout->addWidget(new html_text{ "content/about/index.html" });
+
+  auto html(new html_text{ "content/about/index.html" });
+  html->setMargin(9, Left);
+  body_layout->addWidget(html);
 
   layout_->addWidget(sidebar_);
 }

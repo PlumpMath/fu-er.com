@@ -26,29 +26,11 @@ class application : public WApplication
       setTitle("Fu Er");
       useStyleSheet("style.css");
 
-      /** Topness **/
-      auto topness_container(new WContainerWidget());
-      //topness_container->setStyleClass("topness");
-      auto topness_layout(new WVBoxLayout());
-      topness_container->setLayout(topness_layout);
-      root()->addWidget(topness_container);
-
-      //auto topness(new WImage("img/header/invisible.png"));
-      //topness->setWidth(WLength(100.0f, WLength::Percentage));
-      //topness->setHeight(1.0f);
-      //topness_layout->addWidget(topness);
+      root()->setPadding(0);
 
       root()->addWidget(header_);
       root()->addWidget(content_);
-
-      /** Footer **/
-      auto lower_container(new WContainerWidget());
-      //lower_container->setStyleClass("lower");
-      auto lower_layout(new WVBoxLayout());
-      lower_container->setLayout(lower_layout);
-      root()->addWidget(lower_container);
-
-      lower_layout->addWidget(new WText("<small>Copyright 2014 Fu-Er Toh. All rights reserved.</small>"));
+      root()->addWidget(new WText("<small>Copyright 2014 Fu-Er Toh. All rights reserved.</small>"));
 
       root()->setOverflow(WContainerWidget::OverflowAuto, Vertical);
       root()->setOverflow(WContainerWidget::OverflowHidden, Horizontal);
@@ -100,7 +82,7 @@ class application : public WApplication
         header_->path_changed(nav::main);
       }
 
-      root()->insertWidget(2, content);
+      root()->insertWidget(1, content);
       content_ = content;
     }
 

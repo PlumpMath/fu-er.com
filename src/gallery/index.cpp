@@ -16,7 +16,7 @@ gallery::gallery(std::string const &path)
 {
   layout_->setSpacing(0);
   layout_->setContentsMargins(0, 0, 0, 0);
-  setStyleClass("content");
+  setStyleClass("content gallery");
   setLayout(layout_);
 
   layout_->addWidget(sidebar_);

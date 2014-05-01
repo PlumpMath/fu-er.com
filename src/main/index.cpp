@@ -23,7 +23,7 @@ home::home()
 {
   layout_->setSpacing(9);
   setLayout(layout_);
-  setStyleClass("main");
+  setStyleClass("content main");
   create_banner(layout_, "/gallery/Vector", "img/main/banner_vector.png");
   create_banner(layout_, "/gallery/Raster", "img/main/banner_raster.png");
   create_banner(layout_, "/gallery/Sketches", "img/main/banner_sketches.png");
