@@ -67,7 +67,9 @@ class category : public WContainerWidget
 
       preview_image_->setMaximumSize(400, 400);
 
-      preview_layout_->addWidget(new WText{ preview_image_->get_desc() });
+      auto text(new WText{ preview_image_->get_desc() });
+      text->setPadding(15, Right); /* account for scroll bars */
+      preview_layout_->addWidget(text);
       preview_layout_->addWidget(new WBreak{});
 
       WContainerWidget *step_container{ new WContainerWidget{} };

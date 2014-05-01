@@ -30,7 +30,7 @@ class application : public WApplication
 
       root()->addWidget(header_);
       root()->addWidget(content_);
-      root()->addWidget(new WText("<small>Copyright 2014 Fu-Er Toh. All rights reserved.</small>"));
+      root()->addWidget(new WText("<br/><small>Copyright 2014 Fu-Er Toh. All rights reserved.</small>"));
 
       root()->setOverflow(WContainerWidget::OverflowAuto, Vertical);
       root()->setOverflow(WContainerWidget::OverflowHidden, Horizontal);
