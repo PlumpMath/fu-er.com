@@ -1,5 +1,18 @@
+@font-face
+{
+  font-family: 'SourceSans';
+  src: url('font/SourceSansPro-Regular.ttf');
+}
+@font-face
+{
+  font-family: 'SourceSans-Bold';
+  src: url('font/SourceSansPro-Bold.ttf');
+}
+
 body
 {
+  font-family: 'SourceSans';
+  font-size: 20px;
   background-color: #3F77A0;
   color: white;
   margin-left: auto;
