@@ -42,7 +42,7 @@ release: setup $(SRC)
 	c++ $(SRC) \
     -std=c++11 \
 		-Wall -Wextra -pedantic \
-	-O3 \
+		-O2 \
     -Isrc/ \
     -I/usr/local/include \
 		${WARNING_FLAGS} \
