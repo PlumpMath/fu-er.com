@@ -19,7 +19,6 @@ enum class nav
 {
   main,
   gallery,
-  separator,
   about,
   resume,
   max

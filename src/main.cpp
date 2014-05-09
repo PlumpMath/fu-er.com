@@ -23,7 +23,7 @@ class application : public WApplication
     application(WEnvironment const &env)
       : WApplication(env)
     {
-      setTitle("Fu Er");
+      setTitle("Fu-Er | Programmer | Artist");
       useStyleSheet("style.css");
 
       root()->setPadding(0);
