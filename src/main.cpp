@@ -36,7 +36,8 @@ class application : public WApplication
       root()->setOverflow(WContainerWidget::OverflowHidden, Horizontal);
 
       internalPathChanged().connect(this, &application::on_internal_path_changed);
-      setInternalPath(home::PATH, true);
+      //std::cerr << "initial ip: " << internalPath() << std::endl;
+      on_internal_path_changed(internalPath());
     }
 
     static WApplication* create(WEnvironment const &env)

@@ -13,9 +13,11 @@ SRC=src/main.cpp \
 WARNING_FLAGS=-Wno-cpp
 
 LD_FLAGS=-L/usr/local/lib \
-    -lwthttp -lwt \
+    -lwt \
     -lboost_random -lboost_regex -lboost_signals -lboost_system \
 		-lboost_thread -lboost_filesystem -lboost_program_options -lboost_date_time
+
+OUT=_
 
 .SILENT:
 .PHONY: all debug run
@@ -23,9 +25,9 @@ LD_FLAGS=-L/usr/local/lib \
 all: setup debug
 
 setup:
-	mkdir -p bin
+	rm -f ${OUT}
 
-debug: $(SRC)
+debug: setup $(SRC)
 	c++ $(SRC) \
     -std=c++11 \
 		-ggdb \
@@ -33,8 +35,21 @@ debug: $(SRC)
     -Isrc/ \
     -I/usr/local/include \
 		${WARNING_FLAGS} \
-		${LD_FLAGS} \
-    -o bin/a.out
+		-lwthttp ${LD_FLAGS} \
+    -o ${OUT}
+
+release: setup $(SRC)
+	c++ $(SRC) \
+    -std=c++11 \
+		-Wall -Wextra -pedantic \
+	-O3 \
+    -Isrc/ \
+    -I/usr/local/include \
+		${WARNING_FLAGS} \
+		-lwtfcgi ${LD_FLAGS} \
+    -o ${OUT}
 
 run:
-	sudo cgdb ./bin/a.out -ex "set args --docroot . --http-address 0.0.0.0 --http-port 80" -ex run
+	./${OUT} --docroot . --http-address 0.0.0.0 --http-port 9091
+spawn:
+	spawn-fcgi -n -f ./${OUT} -a 0.0.0.0 -p 9091
