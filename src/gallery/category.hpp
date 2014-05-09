@@ -108,9 +108,9 @@ class category : public WContainerWidget
         }
       }
       std::sort(dirs.begin(), dirs.end(), std::greater<std::string>());
-      auto const skipped(std::find_if(dirs.begin(), dirs.end(),
+      auto const skipped(std::remove_if(dirs.begin(), dirs.end(),
       [](std::string const &s)
-      { return s.find("skip_") == 0; }));
+      { return s.find("skip_") != std::string::npos; }));
       dirs.erase(skipped, dirs.end());
 
       size_t added{};

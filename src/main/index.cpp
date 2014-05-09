@@ -26,6 +26,6 @@ home::home()
   setStyleClass("content main");
   create_banner(layout_, "/gallery/Vector", "img/main/banner_vector.png");
   create_banner(layout_, "/gallery/Raster", "img/main/banner_raster.png");
-  create_banner(layout_, "/gallery/Sketches", "img/main/banner_sketches.png");
+  //create_banner(layout_, "/gallery/Sketches", "img/main/banner_sketches.png");
   create_banner(layout_, "/gallery/Clay", "img/main/banner_clay.png");
 }
