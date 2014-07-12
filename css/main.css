@@ -1,0 +1,62 @@
+@font-face
+{
+  font-family: 'SourceSans';
+  src: url('font/SourceSansPro-Regular.ttf');
+}
+@font-face
+{
+  font-family: 'SourceSans-Bold';
+  src: url('font/SourceSansPro-Bold.ttf');
+}
+
+a:link
+{ color: #FFF; }
+a:visited
+{ color: #FFF; }
+a:hover
+{ color: #FFF; }
+a:active
+{ color: #FFF; }
+
+body
+{
+  font-family: 'SourceSans';
+  background: url("../new_img/bg.png");
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+}
+
+.column
+{
+  background-color: #1f1f1f;
+  margin: 0 auto;
+  width: 1126px;
+  height: 100%;
+  text-align: left;
+  overflow: hidden;
+}
+
+.header
+{
+  text-align: center;
+  width: 1126px;
+  height: 297px;
+  background: url("../new_img/header.png")
+}
+
+.header_spacing
+{
+  padding-top: 20px;
+}
+
+.content
+{
+  margin: 0px 0px 20px 20px;
+  width: 75%;
+  height: 100%;
+  border-right: 1px solid #FFF;
+  padding-right: 10px;
+  float: left;
+}
