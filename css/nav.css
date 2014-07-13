@@ -40,12 +40,6 @@ nav ul li a
   text-align:center;
 }
 
-nav ul li a:hover
-{
-  background: #FFF;
-  color: #000;
-}
-
 nav li:hover ul
 {
   display: block;
@@ -75,8 +69,14 @@ nav ul li ul li a
   text-align: left;
 }
 
-nav ul li a.nav_current
+nav ul li a.nav_current, nav ul li a:hover
 {
+  display: inline-block;
+  text-decoration: none;
   background: #FFF;
   color: #000;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
 }
