@@ -13,16 +13,22 @@ Tumblr.configure do |config|
 end
 
 get '/' do
-  #File.new("index.html").readlines
-  
-  data = ""
+  html = File.new("index.html").read
+  post_html = File.new("post.html").read
   
   tumblr = Tumblr::Client.new
-  posts = tumblr.posts('fu-er.tumblr.com')['posts']
+  posts = tumblr.posts('fu-er.tumblr.com', :limit => 10)['posts']
   posts.each { |p|
-    data += '<hr/>' + p['body']
+    p_html = post_html.gsub('TITLE', 'Post title').gsub('DATE', p['date']).gsub('CONTENT', p['body']).gsub('LINK', p['post_url'])
+    html.gsub!('CONTENT', p_html + 'CONTENT')
   }
-  data
+  html.gsub!('CONTENT', '')
+
+  html
+end
+
+get '/about' do
+  File.new("about/index.html").readlines
 end
 
 get '/resume' do
