@@ -19,7 +19,7 @@ get '/' do
   tumblr = Tumblr::Client.new
   posts = tumblr.posts('fu-er.tumblr.com', :limit => 10)['posts']
   posts.each { |p|
-    p_html = post_html.gsub('TITLE', 'Post title').gsub('DATE', p['date']).gsub('CONTENT', p['body']).gsub('LINK', p['post_url'])
+    p_html = post_html.gsub('TITLE', p['title']).gsub('DATE', p['date']).gsub('CONTENT', p['body']).gsub('LINK', p['post_url'])
     html.gsub!('CONTENT', p_html + 'CONTENT')
   }
   html.gsub!('CONTENT', '')
