@@ -15,7 +15,7 @@ end
 get '/' do
   html = File.new("index.html").read
   post_html = File.new("post.html").read
-  
+
   tumblr = Tumblr::Client.new
   posts = tumblr.posts('fu-er.tumblr.com', :limit => 10)['posts']
   posts.each { |p|
@@ -25,6 +25,10 @@ get '/' do
   html.gsub!('CONTENT', '')
 
   html
+end
+
+get '/gallery' do
+  File.new("gallery/index.html").readlines
 end
 
 get '/about' do
