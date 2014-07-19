@@ -44,6 +44,9 @@ body
   width: 66%;
   text-align: left;
   overflow: hidden;
+  padding: 1px;
+  border: 1px solid #FFF;
+  border-top: none;
 }
 
 .header
@@ -60,26 +63,37 @@ body
   padding-top: 20px;
 }
 
+.header_spacing_2
+{
+  padding-top: 40px;
+}
+
 .content
 {
-  margin: 0px 0px 20px 20px;
   height: 100%;
   min-height: 100%;
   float: left;
 }
 
-.content_with_sidebar
+.content_blog
+{
+  margin: 0px 20px 20px 20px;
+}
+
+.content_about
 {
   width: 75%;
-}
-
-.content_without_sidebar
-{
-  margin-right: 20px;
-}
-
-.content_border
-{
   border-right: 1px solid #FFF;
   padding-right: 10px;
+  margin: 0px 0px 20px 20px;
+}
+
+.content_gallery
+{
+  width: 74%;
+  max-height: 700px;
+  overflow-y: auto;
+  border-left: 1px solid #FFF;
+  padding-left: 20px;
+  margin: 10px 0px 20px 10px;
 }

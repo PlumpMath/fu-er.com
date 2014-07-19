@@ -78,7 +78,7 @@ nav ul li a.nav_current, nav ul li a:hover
   border-radius: 5px;
 }
 
-nav ul li a.nav_current_gallery, nav ul li a:hover
+nav ul li a.nav_current_gallery
 {
   display: inline-block;
   text-decoration: none;

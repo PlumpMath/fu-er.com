@@ -1,0 +1,32 @@
+.gallery_side_bar
+{
+  width: 20%;
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-height: 700px;
+  overflow-y: auto;
+  float: left;
+}
+
+.gallery_thumbnail
+{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 1px;
+  border: 1px solid #FFF;
+}
+
+.gallery_display
+{
+  display: block;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1px;
+  border: 1px solid #FFF;
+}
