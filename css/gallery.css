@@ -21,12 +21,28 @@
   border: 1px solid #FFF;
 }
 
-.gallery_display
+.gallery_step
 {
-  display: block;
+  display: none;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 1px;
+  border: 1px solid #FFF;
+}
+
+.gallery_preview
+{
+  display: none;
   width: 35%;
   margin-left: auto;
   margin-right: auto;
   padding: 1px;
   border: 1px solid #FFF;
+}
+
+.gallery_description
+{
+  display: none;
 }

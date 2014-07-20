@@ -6,64 +6,42 @@
     <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" type="text/css" href="css/gallery.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <script type="text/javascript" src="js/gallery.js"></script>
 
     <title>Hello World</title>
   </head>
-  <body>
+  <body onload=ON_LOAD>
     <div class="column">
       <header>
         <div class="header">
           <nav>
             <ul>
               <li><a href="../">Home</a></li>
-              <li><a href="#" class="nav_current_gallery">Gallery</a></li>
+              <li><a href="/gallery" class="nav_current_gallery">Gallery</a></li>
               <li><a href="../about">About</a></li>
               <li><a href="../resume">Resume</a></li>
             </ul>
           </nav>
         </div>
         <ul class="sub_nav">
-          <li><a href="#">Vector</a></li>
-          <li><a href="#">Raster</a></li>
-          <li><a href="#">3D</a></li>
-          <li><a href="#">Clay</a></li>
-          <li><a href="#">Sketches</a></li>
+          <li><a href="?cat=vector">Vector</a></li>
+          <li><a href="?cat=raster">Raster</a></li>
+          <li><a href="?cat=3d">3D</a></li>
+          <li><a href="?cat=clay">Clay</a></li>
+          <li><a href="?cat=sketches">Sketches</a></li>
         </ul>
       </header>
 
       <div class="header_spacing_2"></div>
 
       <div class="gallery_side_bar">
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
+        THUMBS
       </div>
 
       <div class="content content_gallery">
-        <img class="gallery_display" src="../new_img/transparent.png" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>
-        <p>Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.</p>
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
-        <img class="gallery_thumbnail" src="../new_img/transparent.png" />
+        PREVIEW
+        DESCRIPTION
+        STEPS
       </div>
 
     </div>
