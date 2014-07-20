@@ -36,8 +36,9 @@ get "/gallery" do
   html = File.new("gallery/index.html").read
   dir = "content/gallery/" + cat + "/";
   first = ""
-  Dir.foreach(dir) do |file|
-    next if file == "." or file == ".."
+  files = Dir.entries(dir).sort
+  files.each do |file|
+    next if file == "." or file == ".." or file.start_with?("skip_")
 
     if first.length == 0
       first = file
