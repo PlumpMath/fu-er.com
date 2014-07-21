@@ -27,3 +27,6 @@ ref
 
 # Security files
 oauth_config
+
+# Generated files
+css/all.css

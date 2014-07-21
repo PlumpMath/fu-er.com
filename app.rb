@@ -7,6 +7,15 @@ require 'tumblr_client'
 $stdout.reopen(File.new("log/app.log", "a"))
 $stderr.reopen($stdout)
 
+# Build global css file
+all_css = 'css/all.css'
+File.delete(all_css) if File.exist?(all_css)
+out_css = File.new(all_css, 'w')
+Dir.glob('css/*.css') do |css|
+  out_css << File.new(css, 'rb').read
+end
+out_css.close
+
 get "/" do
   html = File.new("index.html", "rb").read
   post_html = File.new("post.html", "rb").read
