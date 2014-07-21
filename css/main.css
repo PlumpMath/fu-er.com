@@ -27,7 +27,7 @@ html
 body
 {
   font-family: 'SourceSans';
-  background: url("/new_img/bg.png");
+  background: url("/img/bg.png");
   text-align: center;
   margin: 0;
   padding: 0;
@@ -53,7 +53,7 @@ body
 {
   text-align: center;
   height: 283px;
-  background: url("/new_img/header.png");
+  background: url("/img/header.png");
   background-repeat: no-repeat;
   margin-left: 20px;
 }

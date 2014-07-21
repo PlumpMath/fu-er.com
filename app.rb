@@ -4,6 +4,7 @@ require 'rubygems'
 require 'sinatra'
 require 'tumblr_client'
 
+FileUtils.mkdir('log') unless File.directory?('log')
 $stdout.reopen(File.new("log/app.log", "a"))
 $stderr.reopen($stdout)
 
@@ -17,8 +18,12 @@ end
 out_css.close
 
 get "/" do
-  html = File.new("index.html", "rb").read
-  post_html = File.new("post.html", "rb").read
+  redirect "/blog"
+end
+
+get "/blog" do
+  html = File.new("blog/index.html", "rb").read
+  post_html = File.new("blog/post.html", "rb").read
 
   # Stored in a file outside of this repo
   cfg = File.new("oauth_config", "rb").readlines.collect{ |l| l.chomp }
@@ -47,7 +52,7 @@ get "/gallery" do
   end
 
   html = File.new("gallery/index.html", "rb").read
-  dir = "content/gallery/" + cat + "/";
+  dir = "gallery/" + cat + "/";
   first = ""
   files = Dir.entries(dir).sort
   files.each do |file|
