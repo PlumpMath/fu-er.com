@@ -7,8 +7,6 @@ require 'tumblr_client'
 $stdout.reopen(File.new("log/app.log", "a"))
 $stderr.reopen($stdout)
 
-set :public_folder, "/home2/jeayeco1/projects/fu-er"
-
 get "/" do
   html = File.new("index.html", "rb").read
   post_html = File.new("post.html", "rb").read
