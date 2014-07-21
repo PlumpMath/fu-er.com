@@ -1,20 +1,26 @@
-require "sinatra"
-require "tumblr_client"
+# encoding: utf-8
 
-set :public_folder, File.dirname(__FILE__)
+require 'rubygems'
+require 'sinatra'
+require 'tumblr_client'
 
-# Stored in a file outside of this repo
-cfg = File.new("oauth_config").readlines.collect{ |l| l.chomp }
-Tumblr.configure do |config|
-  config.consumer_key = cfg[0]
-  config.consumer_secret = cfg[1]
-  config.oauth_token = cfg[2]
-  config.oauth_token_secret = cfg[3]
-end
+$stdout.reopen(File.new("log/app.log", "a"))
+$stderr.reopen($stdout)
+
+set :public_folder, "/home2/jeayeco1/projects/fu-er"
 
 get "/" do
-  html = File.new("index.html").read
-  post_html = File.new("post.html").read
+  html = File.new("index.html", "rb").read
+  post_html = File.new("post.html", "rb").read
+
+  # Stored in a file outside of this repo
+  cfg = File.new("oauth_config", "rb").readlines.collect{ |l| l.chomp }
+  Tumblr.configure do |config|
+    config.consumer_key = cfg[0]
+    config.consumer_secret = cfg[1]
+    config.oauth_token = cfg[2]
+    config.oauth_token_secret = cfg[3]
+  end
 
   tumblr = Tumblr::Client.new
   posts = tumblr.posts("fu-er.tumblr.com", :limit => 10)["posts"]
@@ -33,7 +39,7 @@ get "/gallery" do
     cat = "clay"
   end
 
-  html = File.new("gallery/index.html").read
+  html = File.new("gallery/index.html", "rb").read
   dir = "content/gallery/" + cat + "/";
   first = ""
   files = Dir.entries(dir).sort
@@ -52,7 +58,7 @@ get "/gallery" do
 
     if File.exists?(desc_file)
       html.gsub!("DESCRIPTION",
-      "<p id=\"#{file}_desc\" class=\"gallery_description\">" + File.new(desc_file).read + "</p>DESCRIPTION")
+      "<p id=\"#{file}_desc\" class=\"gallery_description\">" + File.new(desc_file, "rb").read + "</p>DESCRIPTION")
     else
       html.gsub!("DESCRIPTION",
       "<p id=\"#{file}_desc\" class=\"gallery_description\"></p>DESCRIPTION")
@@ -83,9 +89,9 @@ get "/gallery" do
 end
 
 get "/about" do
-  File.new("about/index.html").readlines
+  File.new("about/index.html", "rb").readlines
 end
 
 get "/resume" do
-  File.new("resume/index.html").readlines
+  File.new("resume/index.html", "rb").readlines
 end
