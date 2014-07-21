@@ -19,3 +19,11 @@
 *.exe
 *.out
 *.app
+
+# Directories
+tmp
+public
+ref
+
+# Security files
+oauth_config
