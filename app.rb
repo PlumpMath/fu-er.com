@@ -62,16 +62,16 @@ get "/gallery" do
       "<p id=\"#{file}_desc\" class=\"gallery_description\"></p>DESCRIPTION")
     end
     html.gsub!("PREVIEW",
-    "<a href=\"../#{preview_file}\" target=\"_blank\"><img id=\"#{file}_preview\" class=\"gallery_preview\" src=\"../#{preview_file}\" /></a>PREVIEW")
+    "<a href=\"../#{preview_file}\" target=\"_blank\"><img id=\"#{file}_preview\" class=\"gallery_preview\" src=\"../#{preview_file}\" alt=\"preview\" /></a>PREVIEW")
     html.gsub!("THUMBS",
-    "<a href=\"javascript:gallery_toggle('#{file}')\"><img id=\"#{file}_thumb\" class=\"gallery_thumbnail\" src=\"../#{thumb_file}\" /></a>" + "THUMBS")
+    "<a href=\"javascript:gallery_toggle('#{file}')\"><img id=\"#{file}_thumb\" class=\"gallery_thumbnail\" src=\"../#{thumb_file}\" alt=\"thumb\" /></a>" + "THUMBS")
 
 
     Dir.glob(tmp_dir + "/*.png") do |step|
       id = File.basename(step, ".png")
       next if id == "thumb" or id == "preview"
       html.gsub!("STEPS",
-      "<a href=\"../#{step}\" target=\"_blank\"><img id=\"#{file}_step_#{id}\" class=\"gallery_step\" src=\"../#{step}\" /></a>" + "STEPS")
+      "<a href=\"../#{step}\" target=\"_blank\"><img id=\"#{file}_step_#{id}\" class=\"gallery_step\" src=\"../#{step}\" alt=\"step\" /></a>" + "STEPS")
     end
   end
 
