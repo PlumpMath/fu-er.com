@@ -90,7 +90,8 @@ body
 
 .content_gallery
 {
-  width: 72%;
+  min-width: 850px;
+  width: 70%;
   height: 700px;
   max-height: 700px;
   overflow-y: auto;
