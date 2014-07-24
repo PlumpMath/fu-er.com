@@ -92,21 +92,23 @@ nav ul li a.nav_current_gallery
   color: #000;
 }
 
-ul.sub_nav {
+ul.sub_nav
+{
   border-radius: 5px;
   padding: 0;
   margin: 0;
   background: #FFF;
   color: #000;
   margin-top: 9px;
-  margin-right: 20px;
+  margin-right: 60px;
   padding-right: 20px;
   height: 1.5em;
   float: right;
   text-align: right;
 }
 
-ul.sub_nav > li {
+ul.sub_nav > li
+{
   display: inline-block;
   padding-left: 20px;
   line-height: 1.5em;
