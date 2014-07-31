@@ -4,7 +4,7 @@ nav
   height: 40px;
   padding-right: 20px;
   position: relative;
-  top: 252px;
+  top: 180px;
   float: right;
 }
 
@@ -99,7 +99,6 @@ ul.sub_nav
   margin: 0;
   background: #FFF;
   color: #000;
-  margin-top: 9px;
   margin-right: 60px;
   padding-right: 20px;
   height: 1.5em;

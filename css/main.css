@@ -52,7 +52,7 @@ body
 .header
 {
   text-align: center;
-  height: 283px;
+  height: 220px;
   background: url("/img/header.png");
   background-repeat: no-repeat;
   margin-left: 20px;
@@ -60,7 +60,7 @@ body
 
 .header_spacing
 {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .header_spacing_2

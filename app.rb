@@ -48,7 +48,7 @@ end
 get "/gallery" do
   cat = params[:cat]
   if cat == nil
-    cat = "clay"
+    cat = "vector"
   end
 
   html = File.new("gallery/index.html", "rb").read
