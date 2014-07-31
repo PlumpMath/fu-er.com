@@ -54,7 +54,7 @@ get "/gallery" do
   html = File.new("gallery/index.html", "rb").read
   dir = "gallery/" + cat + "/";
   first = ""
-  files = Dir.entries(dir).sort
+  files = Dir.entries(dir).sort.reverse
   files.each do |file|
     next if file == "." or file == ".." or file.start_with?("skip_")
 
