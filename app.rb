@@ -4,9 +4,9 @@ require 'rubygems'
 require 'sinatra'
 require 'tumblr_client'
 
-FileUtils.mkdir('log') unless File.directory?('log')
-$stdout.reopen(File.new("log/app.log", "a"))
-$stderr.reopen($stdout)
+#FileUtils.mkdir('log') unless File.directory?('log')
+#$stdout.reopen(File.new("log/app.log", "a"))
+#$stderr.reopen($stdout)
 
 # Build global css file
 all_css = 'css/all.css'
@@ -37,7 +37,21 @@ get "/blog" do
   tumblr = Tumblr::Client.new
   posts = tumblr.posts("fu-er.tumblr.com", :limit => 10)["posts"]
   posts.each { |p|
-    p_html = post_html.gsub("TITLE", p["title"]).gsub("DATE", p["date"]).gsub("CONTENT", p["body"]).gsub("LINK", p["post_url"])
+    puts p
+    type = p["type"]
+    p_html = post_html.gsub("DATE", p["date"]).gsub("LINK", p["post_url"])
+    if type == "text"
+      p_html = p_html.gsub("TITLE", p["title"]).gsub("CONTENT", p["body"])
+    elsif type == "photo"
+      p_html = p_html.gsub("TITLE", "Blah")
+      
+      p["photos"].each { |ph|
+        p_html = p_html.gsub("CONTENT", "<img style='width: 75%;' src='" + ph["original_size"]["url"] + "'></img>" + p["caption"] + "CONTENT")
+      }
+      p_html = p_html.gsub("CONTENT", "")
+    else
+      puts "unsupported post type: " + type
+    end
     html.gsub!("CONTENT", p_html + "CONTENT")
   }
   html.gsub!("CONTENT", "")
