@@ -95,7 +95,8 @@ get "/gallery" do
     "<a href=\"javascript:gallery_toggle('#{file}')\"><img id=\"#{file}_thumb\" class=\"gallery_thumbnail\" src=\"../#{thumb_file}\" alt=\"thumb\" /></a>" + "THUMBS")
 
 
-    Dir.glob(tmp_dir + "/*.png") do |step|
+    steps = Dir.glob(tmp_dir + "/*.png").sort
+    steps.each do |step|
       id = File.basename(step, ".png")
       next if id == "thumb" or id == "preview"
       html.gsub!("STEPS",
