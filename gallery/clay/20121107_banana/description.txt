@@ -1,1 +1,1 @@
-A little half eaten banana. I even tried to make some yellow-green gradient where the tips end.
+<p>A little half eaten banana. I even tried to make some yellow-green gradient where the tips end.</p>

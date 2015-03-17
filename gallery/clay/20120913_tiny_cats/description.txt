@@ -1,1 +1,1 @@
-Some very tiny kittens with a US 1-cent coin.
+<p>Some very tiny kittens with a US 1-cent coin.</p>

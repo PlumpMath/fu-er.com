@@ -84,10 +84,10 @@ get "/gallery" do
 
     if File.exists?(desc_file)
       html.gsub!("DESCRIPTION",
-      "<p id=\"#{file}_desc\" class=\"gallery_description\">" + File.new(desc_file, "rb").read + "</p>DESCRIPTION")
+      "<div id=\"#{file}_desc\" class=\"gallery_description\">" + File.new(desc_file, "rb").read + "</div>DESCRIPTION")
     else
       html.gsub!("DESCRIPTION",
-      "<p id=\"#{file}_desc\" class=\"gallery_description\"></p>DESCRIPTION")
+      "<div id=\"#{file}_desc\" class=\"gallery_description\"></div>DESCRIPTION")
     end
     html.gsub!("PREVIEW",
     "<a href=\"../#{preview_file}\" target=\"_blank\"><img id=\"#{file}_preview\" class=\"gallery_preview\" src=\"../#{preview_file}\" alt=\"preview\" /></a>PREVIEW")
