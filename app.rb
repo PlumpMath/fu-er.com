@@ -35,7 +35,7 @@ get "/blog" do
   end
 
   tumblr = Tumblr::Client.new
-  posts = tumblr.posts("fu-er.tumblr.com", :limit => 10)["posts"]
+  posts = tumblr.posts("fu-er.tumblr.com", :limit => 5)["posts"]
   posts.each { |p|
     puts p
     type = p["type"]
