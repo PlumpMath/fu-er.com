@@ -27,5 +27,7 @@
       (:div :id "container"
             (:div :id "sidebar" "sidebar"
                   (:div :id "sidebar-bottom" "sidebar bottom"))
-            (:div :id "main" "main"))))))
+            (:div :id "main"
+                  "main"
+                  ))))))
 

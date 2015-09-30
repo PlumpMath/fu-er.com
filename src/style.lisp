@@ -5,13 +5,18 @@
 (define-easy-handler (main-css :uri "/main.css") ()
   (setf (content-type*) "text/css")
   (css
-   `(("body"
+   `(("html"
+      :height "100%")
+     
+     ("body"
+      :margin "0"
+      :padding "0"
       :height "100%")
      
      ("#container"
       :display "table"
       :background-color "green"
-      :height "260px")
+      :height "100%")
 
      ("#main"
       :display "table-cell"
@@ -20,15 +25,15 @@
       :width "100%")
 
      ("#sidebar"
-      :min-width "80px"
+      :min-width "300px"
       :display "table-cell"
       :vertical-align "top"
       :background-color "red"
       :position "relative")
 
      ("#sidebar-bottom"
-      :width "30px"
-      :height "30px"
+      :width "300px"
+      :height "50px"
       :background-color "brown"
       :position "absolute"
       :bottom "0"))))
