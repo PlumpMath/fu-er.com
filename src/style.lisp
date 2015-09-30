@@ -12,28 +12,20 @@
       :margin "0"
       :padding "0"
       :height "100%")
-     
-     ("#container"
-      :display "table"
-      :background-color "green"
-      :height "100%")
 
-     ("#main"
-      :display "table-cell"
-      :vertical-align "top"
-      :background-color "blue"
-      :width "100%")
+     (".content"
+      :margin-left "300px"
+      :height "100%"
+      :width "auto"
+      :position "relative"
+      :overflow "auto"
+      :z-index "1"
+      :background-color "blue")
 
-     ("#sidebar"
+     (".sidebar"
+      :position "fixed"
       :min-width "300px"
-      :display "table-cell"
-      :vertical-align "top"
-      :background-color "red"
-      :position "relative")
+      :height "100%"
+      :background-color "red")
 
-     ("#sidebar-bottom"
-      :width "300px"
-      :height "50px"
-      :background-color "brown"
-      :position "absolute"
-      :bottom "0"))))
+     )))
