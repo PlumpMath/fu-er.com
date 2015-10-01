@@ -34,7 +34,8 @@
         :top "0px"
         :left "0px"
         :min-width "200px"
-        :height "200px")
+        :height "200px"
+        :background-image "url(\"/sidebar_top.png\")")
 
         (".sidebar-banner-image"
         ; Centered
@@ -56,7 +57,9 @@
         ; Move the scroll bar out of sight
         :max-height "100%"
         :margin-right "-100px"
-        :padding-right "100px")
+        :padding-right "100px"
+
+        :background-image "url(\"/sidebar_body.png\")")
 
         (".sidebar-nav"
         :list-style-type "none")
