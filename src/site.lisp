@@ -24,7 +24,9 @@
       (:title "Fu-Er's Site")
       (:link :rel "stylesheet" :href "/main.css" :type "text/css"))
      (:body
-      (:div :class "sidebar" "sidebar")
+      (:div :class "sidebar"
+            (:div :class "banner" "banner")
+            "sidebar")
       (:div :class "content"
             "content"
             )))))

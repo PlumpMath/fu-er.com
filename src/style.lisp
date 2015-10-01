@@ -5,7 +5,7 @@
 (define-easy-handler (main-css :uri "/main.css") ()
   (setf (content-type*) "text/css")
   (css
-   `(("html"
+   '(("html"
       :height "100%")
      
      ("body"
@@ -27,5 +27,11 @@
       :min-width "300px"
       :height "100%"
       :background-color "red")
+
+     (".banner"
+      :position "fixed"
+      :min-width "300px"
+      :height "200px"
+      :background-color "grey")
 
      )))
