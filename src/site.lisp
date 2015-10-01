@@ -26,7 +26,19 @@
      (:body
       (:div :class "sidebar"
             (:div :class "sidebar-banner" "sidebar-banner")
-            (:div :class "sidebar-content" "sidebar-content"))
+            (:div :class "sidebar-content"
+                  "sidebar-content" (:br)
+                  "sidebar-content" (:br)
+                  "sidebar-content" (:br)
+                  "sidebar-content" (:br)
+                  "sidebar-content" (:br)
+                  "sidebar-content" (:br)
+                  "sidebar-content" (:br)
+                  "sidebar-content" (:br)
+                  "sidebar-content" (:br)
+                  "sidebar-content" (:br)
+                  "sidebar-content" (:br)
+                  ))
       (:div :class "content"
             "content"
             )))))

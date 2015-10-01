@@ -29,6 +29,8 @@
 
      (".sidebar-banner"
       :position "fixed"
+      :top "0px"
+      :left "0px"
       :min-width "300px"
       :height "200px"
       :background-color "grey")
