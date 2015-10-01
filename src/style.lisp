@@ -28,7 +28,7 @@
       :background-color "red")
 
      (".sidebar-banner"
-      :position "fixed"
+      :position "absolute"
       :top "0px"
       :left "0px"
       :min-width "300px"
@@ -36,10 +36,11 @@
       :background-color "grey")
 
      (".sidebar-content"
-      :position "fixed"
+      :position "absolute"
       :top "200px"
       :left "0px"
-      :height "100%"
+      :bottom "0px"
+      :overflow "auto"
       :min-width "300px"
       :background-color "green")
 
