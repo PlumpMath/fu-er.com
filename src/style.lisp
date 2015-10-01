@@ -14,7 +14,7 @@
       :height "100%")
 
      (".content"
-      :margin-left "300px"
+      :margin-left "200px"
       :height "100%"
       :width "auto"
       :position "relative"
@@ -23,7 +23,7 @@
 
      (".sidebar"
       :position "fixed"
-      :min-width "300px"
+      :min-width "200px"
       :height "100%"
       :overflow "hidden"
       :background-color "red")
@@ -32,7 +32,7 @@
       :position "absolute"
       :top "0px"
       :left "0px"
-      :min-width "300px"
+      :min-width "200px"
       :height "200px"
       :background-color "grey")
 
@@ -42,7 +42,7 @@
       :left "0px"
       :bottom "0px"
       :overflow "auto"
-      :min-width "300px"
+      :min-width "200px"
       :background-color "green"
 
       ; Move the scroll bar out of sight
