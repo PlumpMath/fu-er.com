@@ -25,6 +25,7 @@
       :position "fixed"
       :min-width "300px"
       :height "100%"
+      :overflow "hidden"
       :background-color "red")
 
      (".sidebar-banner"
@@ -42,6 +43,11 @@
       :bottom "0px"
       :overflow "auto"
       :min-width "300px"
-      :background-color "green")
+      :background-color "green"
+
+      ; Move the scroll bar out of sight
+      :max-height "100%"
+      :margin-right "-100px"
+      :padding-right "100px")
 
      )))
