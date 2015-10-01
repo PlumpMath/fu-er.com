@@ -50,4 +50,7 @@
       :margin-right "-100px"
       :padding-right "100px")
 
+     (".sidebar-nav"
+       :list-style-type "none")
+
      )))

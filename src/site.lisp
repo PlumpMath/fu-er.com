@@ -28,7 +28,7 @@
             (:div :class "sidebar-banner" "sidebar-banner")
             (:div :class "sidebar-content"
                   (:nav
-                   (:ul :style "list-style-type: none;"
+                   (:ul :class "sidebar-nav"
                     (:li "Portfolio")
                     (:li "About")
                     (:li "Resume")
