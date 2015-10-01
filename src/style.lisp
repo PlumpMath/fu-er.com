@@ -19,7 +19,6 @@
       :width "auto"
       :position "relative"
       :overflow "auto"
-      :z-index "1"
       :background-color "blue")
 
      (".sidebar"
@@ -28,10 +27,18 @@
       :height "100%"
       :background-color "red")
 
-     (".banner"
+     (".sidebar-banner"
       :position "fixed"
       :min-width "300px"
       :height "200px"
       :background-color "grey")
+
+     (".sidebar-content"
+      :position "fixed"
+      :top "200px"
+      :left "0px"
+      :height "100%"
+      :min-width "300px"
+      :background-color "green")
 
      )))

@@ -25,8 +25,8 @@
       (:link :rel "stylesheet" :href "/main.css" :type "text/css"))
      (:body
       (:div :class "sidebar"
-            (:div :class "banner" "banner")
-            "sidebar")
+            (:div :class "sidebar-banner" "sidebar-banner")
+            (:div :class "sidebar-content" "sidebar-content"))
       (:div :class "content"
             "content"
             )))))
