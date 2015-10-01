@@ -36,6 +36,15 @@
       :height "200px"
       :background-color "grey")
 
+     (".sidebar-banner-image"
+      ; Centered
+      :position "absolute"
+      :top "25px"
+      :left "25px"
+
+      :width "150px"
+      :height "150px")
+
      (".sidebar-content"
       :position "absolute"
       :top "200px"

@@ -25,7 +25,9 @@
       (:link :rel "stylesheet" :href "/main.css" :type "text/css"))
      (:body
       (:div :class "sidebar"
-            (:div :class "sidebar-banner" "sidebar-banner")
+            (:div :class "sidebar-banner"
+                  (:img :class "sidebar-banner-image"
+                        :src "http://jeaye.com/upload/data/visa.jpg"))
             (:div :class "sidebar-content"
                   (:nav
                    (:ul :class "sidebar-nav"
