@@ -12,7 +12,10 @@
 
 (defun start-server ()
   (stop-server)
-  (start (make-instance 'easy-acceptor :address "localhost" :port 8080)))
+  (start (make-instance 'easy-acceptor
+                        :address "localhost"
+                        :port 8080
+                        :document-root #p"www/")))
 
 ; Allow cl-who and parenscript to work together
 (setf *js-string-delimiter* #\")
@@ -27,7 +30,7 @@
       (:div :class "sidebar"
             (:div :class "sidebar-banner"
                   (:img :class "sidebar-banner-image"
-                        :src "http://jeaye.com/upload/data/visa.jpg"))
+                        :src "/avatar_1.png"))
             (:div :class "sidebar-content"
                   (:nav
                    (:ul :class "sidebar-nav"
