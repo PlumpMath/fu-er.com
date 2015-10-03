@@ -3,37 +3,48 @@
 (in-package :jank-repl.style)
 
 (define-easy-handler (main-css :uri "/main.css") ()
-  (let ((global-background-color '(:background-color "#c1b492"))
+  ; 1f110a
+  (let ((global-background-color "#c1b492")
         (sidebar-width "250px")
         (sidebar-banner-height "227px")
         (sidebar-banner-avater-x "40px")
-        (sidebar-banner-avater-y "34px"))
+        (sidebar-banner-avater-y "34px")
+        (sidebar-nav-color "#503222"))
     (setf (content-type*) "text/css")
     (css
-    `(("html"
+     `(("html"
         :height "100%")
 
-        ("body"
+       ("body"
         :margin "0"
         :padding "0"
         :height "100%")
 
-        (".content"
+       (".content"
         :margin-left ,sidebar-width
         :height "100%"
         :width "auto"
         :position "relative"
         :overflow "auto"
-        ,@global-background-color)
+        :background-color ,global-background-color)
 
-        (".sidebar"
+       ("@font-face"
+        :font-family "redressed"
+        :src "url(\"/redressed.ttf\")")
+
+       (".sidebar-text"
+        :font-family "redressed"
+        :font-size "36px"
+        :letter-spacing "2px")
+
+       (".sidebar"
         :position "fixed"
         :min-width ,sidebar-width
         :height "100%"
         :overflow "hidden"
-        ,@global-background-color)
+        :background-color ,global-background-color)
 
-        (".sidebar-banner"
+       (".sidebar-banner"
         :position "absolute"
         :top "0px"
         :left "0px"
@@ -41,14 +52,13 @@
         :height ,sidebar-banner-height
         :background-image "url(\"/sidebar_top.png\")")
 
-        (".sidebar-banner-image"
+       (".sidebar-banner-image"
         ; Centered
-        ; TODO: fudged
         :position "absolute"
         :top ,sidebar-banner-avater-y
         :left ,sidebar-banner-avater-x)
 
-        (".sidebar-content"
+       (".sidebar-content"
         :position "absolute"
         :top ,sidebar-banner-height
         :left "0px"
@@ -64,6 +74,9 @@
         :background-image "url(\"/sidebar_body.png\")"
         :background-repeat "repeat-y")
 
-        (".sidebar-nav"
-        :list-style-type "none")
-        ))))
+       (".sidebar-nav"
+        :list-style-type "none"
+        :padding "15px"
+        :margin "15px"
+        :line-height "150%"
+        :color ,sidebar-nav-color)))))
