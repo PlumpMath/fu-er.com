@@ -3,8 +3,11 @@
 (in-package :jank-repl.style)
 
 (define-easy-handler (main-css :uri "/main.css") ()
-  ; TODO: Pull out 250 and 227
-  (let ((global-background-color '(:background-color "#c9c4b3")))
+  (let ((global-background-color '(:background-color "#c1b492"))
+        (sidebar-width "250px")
+        (sidebar-banner-height "227px")
+        (sidebar-banner-avater-x "40px")
+        (sidebar-banner-avater-y "34px"))
     (setf (content-type*) "text/css")
     (css
     `(("html"
@@ -16,7 +19,7 @@
         :height "100%")
 
         (".content"
-        :margin-left "250px"
+        :margin-left ,sidebar-width
         :height "100%"
         :width "auto"
         :position "relative"
@@ -25,7 +28,7 @@
 
         (".sidebar"
         :position "fixed"
-        :min-width "250px"
+        :min-width ,sidebar-width
         :height "100%"
         :overflow "hidden"
         ,@global-background-color)
@@ -34,24 +37,24 @@
         :position "absolute"
         :top "0px"
         :left "0px"
-        :min-width "250px"
-        :height "227px"
+        :min-width ,sidebar-width
+        :height ,sidebar-banner-height
         :background-image "url(\"/sidebar_top.png\")")
 
         (".sidebar-banner-image"
         ; Centered
         ; TODO: fudged
         :position "absolute"
-        :top "25px"
-        :left "10px")
+        :top ,sidebar-banner-avater-y
+        :left ,sidebar-banner-avater-x)
 
         (".sidebar-content"
         :position "absolute"
-        :top "227px"
+        :top ,sidebar-banner-height
         :left "0px"
         :bottom "0px"
         :overflow "auto"
-        :min-width "250px"
+        :min-width ,sidebar-width
 
         ; Move the scroll bar out of sight
         :max-height "100%"
