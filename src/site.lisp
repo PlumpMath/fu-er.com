@@ -36,7 +36,7 @@
                    (:ul :class "sidebar-nav"
                     (:li "Portfolio")
                     (:li "About")
-                    (:li "Resume")
+                    (:li :class "sidebar-nav-selected" "Resume")
                     (:li "Links")
                     ))))
       (:div :class "content"

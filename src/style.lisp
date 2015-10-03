@@ -3,13 +3,13 @@
 (in-package :jank-repl.style)
 
 (define-easy-handler (main-css :uri "/main.css") ()
-  ; 1f110a
   (let ((global-background-color "#c1b492")
         (sidebar-width "250px")
         (sidebar-banner-height "227px")
         (sidebar-banner-avater-x "40px")
         (sidebar-banner-avater-y "34px")
-        (sidebar-nav-color "#503222"))
+        (sidebar-nav-color "#503222")
+        (sidebar-nav-selected-color "#1f110a"))
     (setf (content-type*) "text/css")
     (css
      `(("html"
@@ -74,6 +74,9 @@
         :background-image "url(\"/sidebar_body.png\")"
         :background-repeat "repeat-y")
 
+       (".sidebar-nav-selected"
+        :color ,sidebar-nav-selected-color)
+       
        (".sidebar-nav"
         :list-style-type "none"
         :padding "15px"
