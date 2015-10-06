@@ -76,10 +76,15 @@
 
        (".sidebar-nav-selected"
         :color ,sidebar-nav-selected-color)
-       
+
        (".sidebar-nav"
         :list-style-type "none"
         :padding "15px"
         :margin "15px"
         :line-height "150%"
-        :color ,sidebar-nav-color)))))
+        :color ,sidebar-nav-color)
+
+       (".sidebar-nav a"
+        :color "inherit"
+        :text-decoration "none")
+       ))))
