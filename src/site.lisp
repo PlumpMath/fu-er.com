@@ -38,14 +38,18 @@
            (dolist (cat '("Portfolio" "About" "Resume" "Links"))
              (cond ((string-equal cat selected)
                     (htm (:li :class "sidebar-nav-selected"
-                           (:a :href (concatenate 'string "/" (string-downcase cat))
-                            (str cat)))))
+                           (:a
+                             :href (concatenate 'string "/"
+                                                (string-downcase cat))
+                             (str cat)))))
                    (t
                     (htm (:li
-                           (:a :href (concatenate 'string "/" (string-downcase cat))
+                           (:a
+                             :href (concatenate 'string "/"
+                                                (string-downcase cat))
                            (str cat))))))))))))))
 
-(define-easy-handler (main-page :uri "/") ()
+(define-easy-handler (portfolio :uri "/portfolio") ()
   (with-html-output-to-string (*standard-output* nil :prologue t)
     (:html
      (:head
@@ -56,4 +60,7 @@
       (:div :class "content"
             "content" (:br)
             )))))
+
+(define-easy-handler (main-page :uri "/") ()
+  (redirect "/portfolio"))
 
