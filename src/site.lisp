@@ -37,9 +37,13 @@
           (:ul :class "sidebar-nav"
            (dolist (cat '("Portfolio" "About" "Resume" "Links"))
              (cond ((string-equal cat selected)
-                    (htm (:li :class "sidebar-nav-selected" (str cat))))
+                    (htm (:li :class "sidebar-nav-selected"
+                           (:a :href (concatenate 'string "/" (string-downcase cat))
+                            (str cat)))))
                    (t
-                    (htm (:li (str cat)))))))))))))
+                    (htm (:li
+                           (:a :href (concatenate 'string "/" (string-downcase cat))
+                           (str cat))))))))))))))
 
 (define-easy-handler (main-page :uri "/") ()
   (with-html-output-to-string (*standard-output* nil :prologue t)
