@@ -12,6 +12,8 @@
     :depends-on ("hunchentoot" "cl-who" "parenscript" "cl-css" "smackjack")
     :components ((:file "src/site"
                         :depends-on ("src/style"))
+                 (:file "src/portfolio"
+                        :depends-on ("src/style"))
                  (:file "src/about"
                         :depends-on ("src/style"))
                  (:file "src/style")))

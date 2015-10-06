@@ -1,6 +1,6 @@
-(defpackage :jank-repl.style
+(defpackage :fu-er-com.style
   (:use :cl :hunchentoot :cl-who :cl-css))
-(in-package :jank-repl.style)
+(in-package :fu-er-com.style)
 
 (define-easy-handler (main-css :uri "/main.css") ()
   (let ((global-background-color "#c1b492")

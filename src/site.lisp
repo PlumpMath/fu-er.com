@@ -1,26 +1,6 @@
 (defpackage :fu-er-com
-  (:use :cl :hunchentoot :cl-who :parenscript)
-  (:export :start-server :stop-server))
+  (:use :cl :hunchentoot :cl-who :parenscript))
 (in-package :fu-er-com)
-
-(defparameter *server* nil)
-
-(setf (html-mode) :html5)
-
-(defun stop-server ()
-  (when *server*
-    (stop *server*)
-    (setq *server* nil)))
-
-(defun start-server ()
-  (stop-server)
-  (start (make-instance 'easy-acceptor
-                        :address "localhost"
-                        :port 8080
-                        :document-root #p"www/")))
-
-; Allow cl-who and parenscript to work together
-(setf *js-string-delimiter* #\")
 
 (defun sidebar-css (&optional selected)
   (unless selected
@@ -49,18 +29,5 @@
                                                 (string-downcase cat))
                            (str cat))))))))))))))
 
-(define-easy-handler (portfolio :uri "/portfolio") ()
-  (with-html-output-to-string (*standard-output* nil :prologue t)
-    (:html
-     (:head
-      (:title "Fu-Er's Site")
-      (:link :rel "stylesheet" :href "/main.css" :type "text/css"))
-     (:body
-      (str (sidebar-css))
-      (:div :class "content"
-            "content" (:br)
-            )))))
-
 (define-easy-handler (main-page :uri "/") ()
   (redirect "/portfolio"))
-
