@@ -5,6 +5,8 @@
 
 (defparameter *server* nil)
 
+(setf (html-mode) :html5)
+
 (defun stop-server ()
   (when *server*
     (stop *server*)
