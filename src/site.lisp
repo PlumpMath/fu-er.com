@@ -22,6 +22,25 @@
 ; Allow cl-who and parenscript to work together
 (setf *js-string-delimiter* #\")
 
+(defun sidebar-css (&optional selected)
+  (unless selected
+    (setq selected "Portfolio"))
+
+  (with-html-output-to-string (*standard-output* nil)
+    (htm
+      (:div :class "sidebar sidebar-text"
+       (:div :class "sidebar-banner"
+        (:img :class "sidebar-banner-image"
+         :src "/avatar_1.png"))
+       (:div :class "sidebar-content"
+        (:nav
+          (:ul :class "sidebar-nav"
+           (dolist (cat '("Portfolio" "About" "Resume" "Links"))
+             (cond ((string-equal cat selected)
+                    (htm (:li :class "sidebar-nav-selected" (str cat))))
+                   (t
+                    (htm (:li (str cat)))))))))))))
+
 (define-easy-handler (main-page :uri "/") ()
   (with-html-output-to-string (*standard-output* nil :prologue t)
     (:html
@@ -29,18 +48,7 @@
       (:title "Fu-Er's Site")
       (:link :rel "stylesheet" :href "/main.css" :type "text/css"))
      (:body
-      (:div :class "sidebar sidebar-text"
-            (:div :class "sidebar-banner"
-                  (:img :class "sidebar-banner-image"
-                        :src "/avatar_1.png"))
-            (:div :class "sidebar-content"
-                  (:nav
-                   (:ul :class "sidebar-nav"
-                    (:li "Portfolio")
-                    (:li "About")
-                    (:li :class "sidebar-nav-selected" "Resume")
-                    (:li "Links")
-                    ))))
+      (str (sidebar-css))
       (:div :class "content"
             "content" (:br)
             )))))
