@@ -4,7 +4,7 @@
 
 (define-easy-handler (main-css :uri "/main.css") ()
   (let ((global-background-color "#c1b492")
-        (banner-text-x "320px")
+        (banner-text-x "70px")
         (sidebar-width "250px")
         (sidebar-banner-height "227px")
         (sidebar-banner-avatar-x "40px")
@@ -28,7 +28,7 @@
         :width "auto"
         :position "relative"
         :margin "0px"
-        :padding "0px"
+        :padding-left "0px"
         :z-index "0"
         :background-image "url(\"/banner_bg.png\")")
 
@@ -41,7 +41,7 @@
 
        (".content"
         :margin-left ,sidebar-width
-        :height "calc(100% - 148px)" ; TODO: clean up
+        :height "100%"
         :width "auto"
         :position "relative"
         :overflow "auto"
@@ -64,7 +64,7 @@
         :left "0px"
         :min-width ,sidebar-width
         :height ,sidebar-banner-height
-        :z-index "1"
+        :z-index "10"
         :background-image "url(\"/sidebar_top.png\")")
 
        (".sidebar-banner-image"
@@ -79,6 +79,7 @@
         :left "0px"
         :bottom "0px"
         :overflow "auto"
+        :z-index "10"
         :min-width ,sidebar-width
 
         ; Move the scroll bar out of sight
@@ -128,5 +129,5 @@
         :position "fixed"
         :bottom "0px"
         :right "0px"
-        :z-index "100")
+        :z-index "9")
        ))))

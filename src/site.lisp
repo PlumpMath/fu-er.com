@@ -60,9 +60,9 @@
       (:link :rel "stylesheet" :href "/main.css" :type "text/css"))
      (:body
       (str (sidebar selected))
-      (:div :class "banner"
-        (:h2 :class "banner-title" (str (string-capitalize selected))))
       (:div :class "content"
+       (:div :class "banner"
+         (:h2 :class "banner-title" (str (string-capitalize selected))))
             (str body))))))
 
 (define-easy-handler (main-page :uri "/") ()
