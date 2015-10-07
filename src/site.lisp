@@ -10,8 +10,9 @@
     (htm
       (:div :class "sidebar sidebar-nav-text"
        (:div :class "sidebar-banner"
-        (:img :class "sidebar-banner-image"
-         :src "/avatar_1.png"))
+        (:a :href "/"
+          (:img :class "sidebar-banner-image"
+                :src "/avatar_1.png")))
        (:div :class "sidebar-content"
         (:nav
           (:ul :class "sidebar-nav"
