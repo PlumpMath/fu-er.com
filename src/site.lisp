@@ -2,9 +2,7 @@
   (:use :cl :hunchentoot :cl-who :parenscript))
 (in-package :fu-er-com)
 
-(defun sidebar-css (&optional selected)
-  (unless selected
-    (setq selected "Portfolio"))
+(defun sidebar-css (selected)
 
   (with-html-output-to-string (*standard-output* nil)
     (htm
