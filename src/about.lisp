@@ -7,5 +7,6 @@
   (fu-er-com::standard-page
     "About"
     (with-html-output-to-string (*standard-output* nil :prologue t)
-      "about content" (:br)
-      "new line")))
+      (:div :class "non-portfolio-content"
+        "about content" (:br)
+        "new line"))))
