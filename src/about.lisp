@@ -7,6 +7,7 @@
   (fu-er-com::standard-page
     "About"
     (with-html-output-to-string (*standard-output* nil :prologue t)
-      (:div :class "non-portfolio-content"
-        "about content" (:br)
-        "new line"))))
+        (:img :class "non-portfolio-content-background"
+              :src "bottom_right.png")
+      "about content" (:br)
+          )))

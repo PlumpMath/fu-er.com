@@ -124,10 +124,9 @@
         :color "inherit"
         :text-decoration "none")
 
-       (".non-portfolio-content"
-        :min-height "100%"
-        :background-color ,global-background-color
-        :background-image "url(\"bottom_right.png\")"
-        :background-position "right bottom"
-        :background-repeat "no-repeat")
+       (".non-portfolio-content-background"
+        :position "fixed"
+        :bottom "0px"
+        :right "0px"
+        :z-index "100")
        ))))
