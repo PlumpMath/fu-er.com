@@ -15,7 +15,13 @@
        (:div :class "sidebar-content"
         (:nav
           (:ul :class "sidebar-nav"
-           (:li (:a :href "/portfolio") "Portfolio")
+           (if (string-equal selected "Portfolio")
+             (htm
+               (:li :class "sidebar-nav-selected"
+                  (:a :href "/portfolio"
+                  "Portfolio")))
+             (htm
+               (:li (:a :href "/portfolio" "Portfolio"))))
 
            (:ul :class "sidebar-sub-nav sidebar-sub-text"
              (dolist (cat '("games" "vector" "raster" "sketches"))
@@ -47,4 +53,4 @@
                            (str cat))))))))))))))
 
 (define-easy-handler (main-page :uri "/") ()
-  (redirect "/portfolio?category=games"))
+  (redirect "/portfolio"))

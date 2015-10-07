@@ -10,7 +10,7 @@
       (:title "Fu-Er's Site")
       (:link :rel "stylesheet" :href "/main.css" :type "text/css"))
      (:body
-      (str (fu-er-com::sidebar-css category))
+      (str (fu-er-com::sidebar-css (or category "Portfolio")))
       (:div :class "content"
             "content" (:br)
             )))))
