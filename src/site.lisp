@@ -50,7 +50,7 @@
                                                 (string-downcase cat))
                            (str cat))))))))))))))
 
-(defun standard-page (selected)
+(defun standard-page (selected body)
   (with-html-output-to-string (*standard-output* nil :prologue t)
     (:html
      (:head
@@ -62,7 +62,7 @@
       (str (sidebar selected))
       (:div :class "banner")
       (:div :class "content"
-            "content" (:br))))))
+            (str body))))))
 
 (define-easy-handler (main-page :uri "/") ()
   (redirect "/portfolio"))
