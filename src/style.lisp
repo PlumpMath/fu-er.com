@@ -4,10 +4,11 @@
 
 (define-easy-handler (main-css :uri "/main.css") ()
   (let ((global-background-color "#c1b492")
+        (banner-text-x "320px")
         (sidebar-width "250px")
         (sidebar-banner-height "227px")
-        (sidebar-banner-avater-x "40px")
-        (sidebar-banner-avater-y "34px")
+        (sidebar-banner-avatar-x "40px")
+        (sidebar-banner-avatar-y "34px")
         (sidebar-nav-color "#503222")
         (sidebar-nav-selected-color "#1f110a"))
     (setf (content-type*) "text/css")
@@ -25,7 +26,18 @@
         :height "148px"
         :width "auto"
         :position "relative"
+        :margin "0px"
+        :padding "0px"
+        :z-index "0"
         :background-image "url(\"/banner_bg.png\")")
+
+       (".banner-title"
+        :color ,sidebar-nav-color
+        :font-family "redressed"
+        :font-size "45px"
+        :display "inline-block"
+        :padding-left ,banner-text-x
+        )
 
        (".content"
         :margin-left ,sidebar-width
@@ -52,13 +64,14 @@
         :left "0px"
         :min-width ,sidebar-width
         :height ,sidebar-banner-height
+        :z-index "1"
         :background-image "url(\"/sidebar_top.png\")")
 
        (".sidebar-banner-image"
         ; Centered
         :position "absolute"
-        :top ,sidebar-banner-avater-y
-        :left ,sidebar-banner-avater-x)
+        :top ,sidebar-banner-avatar-y
+        :left ,sidebar-banner-avatar-x)
 
        (".sidebar-content"
         :position "absolute"

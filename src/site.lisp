@@ -60,7 +60,8 @@
       (:link :rel "stylesheet" :href "/main.css" :type "text/css"))
      (:body
       (str (sidebar selected))
-      (:div :class "banner")
+      (:div :class "banner"
+        (:h2 :class "banner-title" (str (string-capitalize selected))))
       (:div :class "content"
             (str body))))))
 
