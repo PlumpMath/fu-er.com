@@ -30,12 +30,7 @@
 
        ("@font-face"
         :font-family "redressed"
-        :src "url(\"/redressed.ttf\")")
-
-       (".sidebar-text"
-        :font-family "redressed"
-        :font-size "36px"
-        :letter-spacing "2px")
+        :src "url(\"/AlegreyaSans-Medium.otf\")")
 
        (".sidebar"
         :position "fixed"
@@ -74,17 +69,38 @@
         :background-image "url(\"/sidebar_body.png\")"
         :background-repeat "repeat-y")
 
+       (".sidebar-nav-text"
+        :font-family "redressed"
+        :font-size "40px")
+
        (".sidebar-nav-selected"
         :color ,sidebar-nav-selected-color)
 
        (".sidebar-nav"
         :list-style-type "none"
-        :padding "15px"
-        :margin "15px"
-        :line-height "150%"
+        :padding-left "20px"
+        :margin "0px"
+        :margin-top "-10px"
+        :line-height "170%"
         :color ,sidebar-nav-color)
 
        (".sidebar-nav a"
+        :color "inherit"
+        :text-decoration "none")
+
+       (".sidebar-sub-text"
+        :font-family "redressed"
+        :font-size "30px")
+
+       (".sidebar-sub-nav"
+        :list-style-type "none"
+        :padding "0px"
+        :margin-left "20px"
+        :margin-bottom "20px"
+        :line-height "120%"
+        :color ,sidebar-nav-color)
+
+       (".sidebar-sub-nav a"
         :color "inherit"
         :text-decoration "none")
        ))))

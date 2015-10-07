@@ -3,14 +3,14 @@
   (:export :start-server :stop-server))
 (in-package :fu-er-com.portfolio)
 
-(define-easy-handler (portfolio :uri "/portfolio") ()
+(define-easy-handler (portfolio :uri "/portfolio") (category)
   (with-html-output-to-string (*standard-output* nil :prologue t)
     (:html
      (:head
       (:title "Fu-Er's Site")
       (:link :rel "stylesheet" :href "/main.css" :type "text/css"))
      (:body
-      (str (fu-er-com::sidebar-css))
+      (str (fu-er-com::sidebar-css category))
       (:div :class "content"
             "content" (:br)
             )))))
