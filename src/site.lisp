@@ -3,7 +3,6 @@
 (in-package :fu-er-com)
 
 (defun sidebar-css (selected)
-
   (with-html-output-to-string (*standard-output* nil)
     (htm
       (:div :class "sidebar sidebar-nav-text"

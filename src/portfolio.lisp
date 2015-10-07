@@ -11,6 +11,7 @@
       (:link :rel "stylesheet" :href "/main.css" :type "text/css"))
      (:body
       (str (fu-er-com::sidebar-css (or category "Portfolio")))
+      (:div :class "banner")
       (:div :class "content"
             "content" (:br)
             )))))

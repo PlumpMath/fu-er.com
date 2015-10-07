@@ -20,6 +20,13 @@
         :padding "0"
         :height "100%")
 
+       (".banner"
+        :margin-left ,sidebar-width
+        :height "148px"
+        :width "auto"
+        :position "relative"
+        :background-image "url(\"/banner_bg.png\")")
+
        (".content"
         :margin-left ,sidebar-width
         :height "100%"
