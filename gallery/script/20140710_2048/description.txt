@@ -1,1 +1,0 @@
-<p>My second scripting project in 3dsMax, <a target="_blank" href="https://github.com/fuer/2048_maxscript">2048</a>. Made while trying to teach myself some MaxScript, and to get familiar with the 3dsMax interface again. There is a short video of a play session in the project link as well. I am quite fond of the keyboard support and the slide/scale 'animations' of the cubes.</p>

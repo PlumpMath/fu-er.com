@@ -1,1 +1,0 @@
-<p>Some character concept art for <a target="_blank" href="https://github.com/jeaye/q3">Q3</a>, a 3D first-person shooter with destructible terrain. These are the two playable characters on opposing sides. The theme is whimsical horror, with little children and plushies fighting it out in a bloody, nightmarish environment.</p>
