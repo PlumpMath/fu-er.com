@@ -9,7 +9,7 @@
         (sidebar-banner-height "227px")
         (sidebar-banner-avatar-x "40px")
         (sidebar-banner-avatar-y "34px")
-        (sidebar-nav-color "#503222")
+        (text-color "#503222")
         (sidebar-nav-selected-color "#1f110a"))
     (setf (content-type*) "text/css")
     (css
@@ -17,6 +17,7 @@
         :height "100%")
 
        ("body"
+        :color ,text-color
         :margin "0"
         :padding "0"
         :height "100%")
@@ -32,7 +33,6 @@
         :background-image "url(\"/banner_bg.png\")")
 
        (".banner-title"
-        :color ,sidebar-nav-color
         :font-family "redressed"
         :font-size "45px"
         :display "inline-block"
@@ -102,7 +102,7 @@
         :margin "0px"
         :margin-top "-10px"
         :line-height "170%"
-        :color ,sidebar-nav-color)
+        :color ,text-color)
 
        (".sidebar-nav a"
         :color "inherit"
@@ -118,7 +118,7 @@
         :margin-left "20px"
         :margin-bottom "20px"
         :line-height "120%"
-        :color ,sidebar-nav-color)
+        :color ,text-color)
 
        (".sidebar-sub-nav a"
         :color "inherit"
