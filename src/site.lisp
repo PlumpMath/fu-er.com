@@ -2,7 +2,7 @@
   (:use :cl :hunchentoot :cl-who :parenscript))
 (in-package :fu-er-com)
 
-(defun sidebar-css (selected)
+(defun sidebar (selected)
   (with-html-output-to-string (*standard-output* nil)
     (htm
       (:div :class "sidebar sidebar-nav-text"
@@ -49,6 +49,20 @@
                              :href (concatenate 'string "/"
                                                 (string-downcase cat))
                            (str cat))))))))))))))
+
+(defun standard-page (selected)
+  (with-html-output-to-string (*standard-output* nil :prologue t)
+    (:html
+     (:head
+      (:title (str (concatenate 'string
+                                "Fu-Er | "
+                                (string-capitalize selected))))
+      (:link :rel "stylesheet" :href "/main.css" :type "text/css"))
+     (:body
+      (str (sidebar selected))
+      (:div :class "banner")
+      (:div :class "content"
+            "content" (:br))))))
 
 (define-easy-handler (main-page :uri "/") ()
   (redirect "/portfolio"))
