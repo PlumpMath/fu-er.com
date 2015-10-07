@@ -41,7 +41,7 @@
 
        (".content"
         :margin-left ,sidebar-width
-        :height "100%"
+        :height "calc(100% - 148px)" ; TODO: clean up
         :width "auto"
         :position "relative"
         :overflow "auto"
