@@ -125,7 +125,7 @@
         :text-decoration "none")
 
        (".non-portfolio-content"
-        :height "100%"
+        :min-height "100%"
         :background-color ,global-background-color
         :background-image "url(\"bottom_right.png\")"
         :background-position "right bottom"
