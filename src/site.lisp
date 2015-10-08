@@ -69,7 +69,7 @@
             (str body))))))
 
 (defun non-portfolio-content-background ()
-  (with-html-output-to-string (*standard-output* nil :prologue t)
+  (with-html-output-to-string (*standard-output* nil)
       (:img :class "non-portfolio-content-background"
             :src "bottom_right.png")))
 
