@@ -1,8 +1,11 @@
 fu-er.com
 =========
 
-Source for http://fu-er.com. This website is run as a Ruby web application using Sinatra.
+Source for http://fu-er.com. This website is built entirely in Common Lisp.
 
-Required gems:
-  - sinatra
-  - tumblr_client
+Libraries used:
+  - hunchentoot
+  - parenscript
+  - cl-who
+  - cl-css
+  - smackjack
