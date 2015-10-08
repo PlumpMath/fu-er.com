@@ -30,7 +30,7 @@
         :margin "0px"
         :padding-left "0px"
         :z-index "0"
-        :background-image "url(\"/banner_bg.png\")")
+        :background-image "url(\"/img/banner.png\")")
 
        (".banner-title"
         :font-family "redressed"
@@ -65,7 +65,7 @@
         :min-width ,sidebar-width
         :height ,sidebar-banner-height
         :z-index "10"
-        :background-image "url(\"/sidebar_top.png\")")
+        :background-image "url(\"/img/sidebar/top.png\")")
 
        (".sidebar-banner-image"
         ; Centered
@@ -87,7 +87,7 @@
         :margin-right "-100px"
         :padding-right "100px"
 
-        :background-image "url(\"/sidebar_body.png\")"
+        :background-image "url(\"/img/sidebar/body.png\")"
         :background-repeat "repeat-y")
 
        (".sidebar-nav-text"

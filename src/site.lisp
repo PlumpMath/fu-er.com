@@ -3,7 +3,7 @@
 (in-package :fu-er-com)
 
 (defun random-avatar ()
-  "/avatar_1.png")
+  "/img/avatar/1.png")
 
 (defun sidebar (selected)
   (with-html-output-to-string (*standard-output* nil)
@@ -71,7 +71,7 @@
 (defun non-portfolio-content-background ()
   (with-html-output-to-string (*standard-output* nil)
       (:img :class "non-portfolio-content-background"
-            :src "bottom_right.png")))
+            :src "/img/non-portfolio/background.png")))
 
 (define-easy-handler (main-page :uri "/") ()
   (redirect "/portfolio"))
