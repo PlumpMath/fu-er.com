@@ -16,4 +16,8 @@
                         :depends-on ("src/style"))
                  (:file "src/about"
                         :depends-on ("src/style"))
+                 (:file "src/resume"
+                        :depends-on ("src/style"))
+                 (:file "src/links"
+                        :depends-on ("src/style"))
                  (:file "src/style")))

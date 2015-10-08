@@ -1,11 +1,11 @@
-(defpackage :fu-er-com.about
+(defpackage :fu-er-com.links
   (:use :cl :hunchentoot :cl-who :parenscript))
-(in-package :fu-er-com.about)
+(in-package :fu-er-com.links)
 
-(define-easy-handler (about-page :uri "/about") ()
+(define-easy-handler (about-page :uri "/links") ()
   (fu-er-com::standard-page
-    "About"
+    "Links"
     (with-html-output-to-string (*standard-output* nil :prologue t)
       (str (fu-er-com::non-portfolio-content-background))
-      "about content" (:br)
+      "links content" (:br)
           )))

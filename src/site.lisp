@@ -65,5 +65,10 @@
          (:h2 :class "banner-title" (str (string-capitalize selected))))
             (str body))))))
 
+(defun non-portfolio-content-background ()
+  (with-html-output-to-string (*standard-output* nil :prologue t)
+      (:img :class "non-portfolio-content-background"
+            :src "bottom_right.png")))
+
 (define-easy-handler (main-page :uri "/") ()
   (redirect "/portfolio"))
