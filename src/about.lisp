@@ -5,7 +5,7 @@
 (define-easy-handler (about-page :uri "/about") ()
   (fu-er-com::standard-page
     "About"
-    (with-html-output-to-string (*standard-output* nil :prologue t)
+    (with-html-output-to-string (*standard-output* nil)
       (str (fu-er-com::non-portfolio-content-background))
       "about content" (:br)
           )))
