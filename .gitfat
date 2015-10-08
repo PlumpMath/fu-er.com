@@ -1,0 +1,3 @@
+[rsync]
+remote = jeaye.com:fu-er.com-fat.git
+sshuser = git
