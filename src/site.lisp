@@ -2,6 +2,9 @@
   (:use :cl :hunchentoot :cl-who :parenscript))
 (in-package :fu-er-com)
 
+(defun random-avatar ()
+  "/avatar_1.png")
+
 (defun sidebar (selected)
   (with-html-output-to-string (*standard-output* nil)
     (htm
@@ -9,7 +12,7 @@
        (:div :class "sidebar-banner"
         (:a :href "/"
           (:img :class "sidebar-banner-image"
-                :src "/avatar_1.png")))
+                :src (str (random-avatar)))))
        (:div :class "sidebar-content"
         (:nav
           (:ul :class "sidebar-nav"
