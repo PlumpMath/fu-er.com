@@ -5,6 +5,7 @@
 (define-easy-handler (main-css :uri "/main.css") ()
   (let ((global-background-color "#c1b492")
         (banner-text-x "70px")
+        (banner-height "148px")
         (sidebar-width "250px")
         (sidebar-banner-height "227px")
         (sidebar-banner-avatar-x "40px")
@@ -24,7 +25,7 @@
 
        (".banner"
         :margin-left ,sidebar-width
-        :height "148px"
+        :height ,banner-height
         :width "auto"
         :position "relative"
         :margin "0px"
@@ -33,11 +34,10 @@
         :background-image "url(\"/img/banner.png\")")
 
        (".banner-title"
-        :font-family "redressed"
+        :font-family "alegrey"
         :font-size "45px"
         :display "inline-block"
-        :padding-left ,banner-text-x
-        )
+        :padding-left ,banner-text-x)
 
        (".content"
         :margin-left ,sidebar-width
@@ -48,8 +48,8 @@
         :background-color ,global-background-color)
 
        ("@font-face"
-        :font-family "redressed"
-        :src "url(\"/AlegreyaSans-Medium.otf\")")
+        :font-family "alegrey"
+        :src "url(\"/font/alegreysans-medium.otf\")")
 
        (".sidebar"
         :position "fixed"
@@ -91,7 +91,7 @@
         :background-repeat "repeat-y")
 
        (".sidebar-nav-text"
-        :font-family "redressed"
+        :font-family "alegrey"
         :font-size "40px")
 
        (".sidebar-nav-selected"
@@ -110,7 +110,7 @@
         :text-decoration "none")
 
        (".sidebar-sub-text"
-        :font-family "redressed"
+        :font-family "alegrey"
         :font-size "30px")
 
        (".sidebar-sub-nav"
@@ -130,4 +130,12 @@
         :bottom "0px"
         :right "0px"
         :z-index "9")
+
+       (".non-portfolio-content"
+        :position "absolute"
+        :top ,banner-height
+        :left "0"
+        :padding-top "20px"
+        :margin-left "70px"
+        :z-index "10")
        ))))
