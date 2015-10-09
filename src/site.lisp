@@ -3,7 +3,11 @@
 (in-package :fu-er-com)
 
 (defun random-avatar ()
-  "/img/avatar/1.png")
+  (let* ((avatars (directory "www/img/avatar/*.png"))
+         (index (random (length avatars))))
+    (concatenate 'string
+                 "/img/avatar/"
+                 (file-namestring (nth index avatars)))))
 
 (defun sidebar (selected)
   (with-html-output-to-string (*standard-output* nil)
