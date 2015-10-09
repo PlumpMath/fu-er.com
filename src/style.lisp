@@ -36,8 +36,7 @@
         :font-family "alegrey"
         :font-size "45px"
         :display "inline-block"
-        :padding-left ,banner-text-x
-        )
+        :padding-left ,banner-text-x)
 
        (".content"
         :margin-left ,sidebar-width
