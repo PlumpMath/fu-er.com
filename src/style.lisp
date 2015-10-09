@@ -18,6 +18,8 @@
         :height "100%")
 
        ("body"
+        :font-family "alegrey"
+        :font-size "30px"
         :color ,text-color
         :margin "0"
         :padding "0"
@@ -34,7 +36,6 @@
         :background-image "url(\"/img/banner.png\")")
 
        (".banner-title"
-        :font-family "alegrey"
         :font-size "45px"
         :display "inline-block"
         :padding-left ,banner-text-x)
@@ -91,7 +92,6 @@
         :background-repeat "repeat-y")
 
        (".sidebar-nav-text"
-        :font-family "alegrey"
         :font-size "40px")
 
        (".sidebar-nav-selected"
@@ -110,7 +110,6 @@
         :text-decoration "none")
 
        (".sidebar-sub-text"
-        :font-family "alegrey"
         :font-size "30px")
 
        (".sidebar-sub-nav"
@@ -131,17 +130,20 @@
         :min-height "332px" ; TODO variable
         )
 
-       ; title 44; rank 40; body 30
        (".portfolio-article-image"
         :float "left"
         :padding-right "30px")
 
        (".portfolio-article-title"
+        :font-size "44px"
+        :font-weight "bold"
         :margin "0px"
         :padding "0px")
 
        (".portfolio-article-rank"
+        :font-size "40px"
         :font-style "italic"
+        :font-weight "normal"
         :margin "0px"
         :padding "0px")
 
