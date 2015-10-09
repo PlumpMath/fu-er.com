@@ -15,7 +15,6 @@
 (defun start-server ()
   (stop-server)
   (start (make-instance 'easy-acceptor
-                        :address "localhost"
                         :port 8080
                         :document-root #p"www/")))
 
