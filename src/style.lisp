@@ -33,7 +33,7 @@
         :background-image "url(\"/img/banner.png\")")
 
        (".banner-title"
-        :font-family "redressed"
+        :font-family "alegrey"
         :font-size "45px"
         :display "inline-block"
         :padding-left ,banner-text-x
@@ -48,7 +48,7 @@
         :background-color ,global-background-color)
 
        ("@font-face"
-        :font-family "redressed"
+        :font-family "alegrey"
         :src "url(\"/font/alegreysans-medium.otf\")")
 
        (".sidebar"
@@ -91,7 +91,7 @@
         :background-repeat "repeat-y")
 
        (".sidebar-nav-text"
-        :font-family "redressed"
+        :font-family "alegrey"
         :font-size "40px")
 
        (".sidebar-nav-selected"
@@ -110,7 +110,7 @@
         :text-decoration "none")
 
        (".sidebar-sub-text"
-        :font-family "redressed"
+        :font-family "alegrey"
         :font-size "30px")
 
        (".sidebar-sub-nav"
