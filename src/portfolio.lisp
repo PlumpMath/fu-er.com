@@ -6,4 +6,34 @@
   (fu-er-com::standard-page
     (or category "Portfolio")
     (with-html-output-to-string (*standard-output* nil)
-      "content" (:br))))
+      (:article
+        :class "portfolio-article"
+        (:img :class "portfolio-article-image"
+              :src "/img/portfolio/framed-placeholder.png")
+        (:h2 "Volley")
+        (:p "Description about volley"))
+      (:article
+        :class "portfolio-article"
+        (:img :class "portfolio-article-image"
+              :src "/img/portfolio/framed-placeholder.png")
+        (:h2 "Volley")
+        (:p "Description about volley"))
+      (:article
+        :class "portfolio-article"
+        (:img :class "portfolio-article-image"
+              :src "/img/portfolio/framed-placeholder.png")
+        (:h2 "Volley")
+        (:p "Description about volley"))
+      (:article
+        :class "portfolio-article"
+        (:img :class "portfolio-article-image"
+              :src "/img/portfolio/framed-placeholder.png")
+        (:h2 "Volley")
+        (:p "Description about volley"))
+      (:article
+        :class "portfolio-article"
+        (:img :class "portfolio-article-image"
+              :src "/img/portfolio/framed-placeholder.png")
+        (:h2 "Volley")
+        (:p "Description about volley"))
+      )))

@@ -125,6 +125,13 @@
         :color "inherit"
         :text-decoration "none")
 
+       (".portfolio-article"
+        :min-height "332px" ; TODO variable
+        )
+
+       (".portfolio-article-image"
+        :float "left")
+
        (".non-portfolio-content-background"
         :position "fixed"
         :bottom "0px"
