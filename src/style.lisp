@@ -126,11 +126,21 @@
         :text-decoration "none")
 
        (".portfolio-article"
+        :margin-top "50px"
         :min-height "332px" ; TODO variable
         )
 
        (".portfolio-article-image"
         :float "left")
+
+       (".portfolio-article-title"
+        :margin "0px"
+        :padding "0px")
+
+       (".portfolio-article-rank"
+        :font-style "italic"
+        :margin "0px"
+        :padding "0px")
 
        (".non-portfolio-content-background"
         :position "fixed"

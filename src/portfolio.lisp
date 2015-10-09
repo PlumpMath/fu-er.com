@@ -8,8 +8,8 @@
       :class "portfolio-article"
       (:img :class "portfolio-article-image"
             :src "/img/portfolio/framed-placeholder.png")
-      (:h2 (str title))
-      (:h4 (str rank))
+      (:h2 :class "portfolio-article-title" (str title))
+      (:h4 :class "portfolio-article-rank" (str rank))
       (:p (str description)))
     ))
 
