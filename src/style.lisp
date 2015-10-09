@@ -127,11 +127,14 @@
 
        (".portfolio-article"
         :margin-top "50px"
+        :margin-left "70px"
         :min-height "332px" ; TODO variable
         )
 
+       ; title 44; rank 40; body 30
        (".portfolio-article-image"
-        :float "left")
+        :float "left"
+        :padding-right "30px")
 
        (".portfolio-article-title"
         :margin "0px"
