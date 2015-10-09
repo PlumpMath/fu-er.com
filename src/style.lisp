@@ -49,7 +49,7 @@
 
        ("@font-face"
         :font-family "redressed"
-        :src "url(\"/AlegreyaSans-Medium.otf\")")
+        :src "url(\"/font/alegreysans-medium.otf\")")
 
        (".sidebar"
         :position "fixed"
