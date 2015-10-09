@@ -5,6 +5,7 @@
 (define-easy-handler (main-css :uri "/main.css") ()
   (let ((global-background-color "#c1b492")
         (banner-text-x "70px")
+        (banner-height "148px")
         (sidebar-width "250px")
         (sidebar-banner-height "227px")
         (sidebar-banner-avatar-x "40px")
@@ -24,7 +25,7 @@
 
        (".banner"
         :margin-left ,sidebar-width
-        :height "148px"
+        :height ,banner-height
         :width "auto"
         :position "relative"
         :margin "0px"
@@ -129,4 +130,12 @@
         :bottom "0px"
         :right "0px"
         :z-index "9")
+
+       (".non-portfolio-content"
+        :position "absolute"
+        :top ,banner-height
+        :left "0"
+        :padding-top "20px"
+        :margin-left "70px"
+        :z-index "10")
        ))))
