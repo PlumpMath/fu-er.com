@@ -49,8 +49,13 @@
       :class "portfolio-overlay"
       (:div
         :class "portfolio-overlay-modal"
-        (:p
-          "Stuff here!")))))
+        (:article
+          :class "portfolio-article"
+          (:img :class "portfolio-article-image"
+                :src "/img/portfolio/framed-placeholder.png")
+          (:h2 :class "portfolio-article-title" "Title")
+          (:p
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."))))))
 
 (define-easy-handler (portfolio :uri "/portfolio") (category)
   (fu-er-com::standard-page
