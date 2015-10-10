@@ -43,11 +43,19 @@
                   "/portfolio?category=games&id=tiny-monsters"
                   "A cute money grubber."))))
 
+(defun art (category)
+  (with-html-output-to-string (*standard-output* nil)
+    ))
+
 (define-easy-handler (portfolio :uri "/portfolio") (category)
   (fu-er-com::standard-page
     (or category "Portfolio")
     (with-html-output-to-string (*standard-output* nil)
       (cond
         ((string-equal category "games") (str (games)))
+        ((or (string-equal category "vector")
+             (string-equal category "raster")
+             (string-equal category "sketches"))
+           (str (art category)))
         (t (str (home)))
         ))))
