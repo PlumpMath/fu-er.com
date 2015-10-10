@@ -151,6 +151,26 @@
         :margin "0px"
         :padding "0px")
 
+       (".portfolio-overlay"
+        ;:visibility "hidden"
+        :position "absolute"
+        :left "0px"
+        :top "0px"
+        :width "100%"
+        :height "100%"
+        :text-align "center"
+        :z-index "11"
+        :background-color "grey")
+
+       (".portfolio-overlay-modal"
+        :width "80%"
+        :margin "100px auto" ; Centered
+        :background-color ,global-background-color
+        :border "1px solid"
+        :border-color ,text-color
+        :padding "0px"
+        :text-align "left")
+
        (".non-portfolio-content-background"
         :position "fixed"
         :bottom "0px"

@@ -45,7 +45,12 @@
 
 (defun art (category)
   (with-html-output-to-string (*standard-output* nil)
-    ))
+    (:div
+      :class "portfolio-overlay"
+      (:div
+        :class "portfolio-overlay-modal"
+        (:p
+          "Stuff here!")))))
 
 (define-easy-handler (portfolio :uri "/portfolio") (category)
   (fu-er-com::standard-page
