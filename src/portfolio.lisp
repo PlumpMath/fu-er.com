@@ -14,15 +14,40 @@
         (:h2 :class "portfolio-article-title" (str title))
         (when rank
           (htm (:h4 :class "portfolio-article-rank" (str rank))))
-        (:p (str description))))
-    ))
+        (:p (str description))))))
+
+(defun home ()
+  (with-html-output-to-string (*standard-output* nil)
+    (str (article "Games"
+                  "/portfolio?category=games"
+                  "Professional projects."))
+    (str (article "Vector"
+                  "/portfolio?category=vector"
+                  "UI design and other vectorized pieces."))
+    (str (article "Raster"
+                  "/portfolio?category=raster"
+                  "Illustrations and personal projects."))
+    (str (article "Sketches"
+                  "/portfolio?category=sketches"
+                  "Doodles of noodles."))))
+
+(defun games ()
+  (with-html-output-to-string (*standard-output* nil)
+    (str (article "Volley"
+                  "/portfolio?category=games&id=volley"
+                  "A game I made."))
+    (str (article "Family Guy : The Quest for Stuff"
+                  "/portfolio?category=games&id=family-guy"
+                  "A super top hit mega money shot."))
+    (str (article "Tiny Monsters"
+                  "/portfolio?category=games&id=tiny-monsters"
+                  "A cute money grubber."))))
 
 (define-easy-handler (portfolio :uri "/portfolio") (category)
   (fu-er-com::standard-page
     (or category "Portfolio")
     (with-html-output-to-string (*standard-output* nil)
-      (str (article "Volley"
-                    "/portfolio?category=games"
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue."
-                    "Furthington Studios | Artist, designer, engineer"))
-      )))
+      (cond
+        ((string-equal category "games") (str (games)))
+        (t (str (home)))
+        ))))
