@@ -127,8 +127,7 @@
        (".portfolio-article"
         :margin-top "50px"
         :margin-left "70px"
-        :min-height "332px" ; TODO variable
-        )
+        :min-height "332px") ; TODO variable
 
        (".portfolio-article-link"
         :color "inherit"
@@ -164,12 +163,17 @@
 
        (".portfolio-overlay-modal"
         :width "80%"
+        :height "80%"
         :margin "100px auto" ; Centered
         :background-color ,global-background-color
         :border "1px solid"
         :border-color ,text-color
         :padding "0px"
         :text-align "left")
+
+       (".portfolio-overlay-thumbs"
+        :margin-top "50px"
+        :margin-left "70px")
 
        (".non-portfolio-content-background"
         :position "fixed"

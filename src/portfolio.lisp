@@ -55,7 +55,14 @@
                 :src "/img/portfolio/framed-placeholder.png")
           (:h2 :class "portfolio-article-title" "Title")
           (:p
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."))))))
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."))
+        (:article
+          :class "portfolio-overlay-thumbs"
+          (:img :src "/img/avatar/1.png")
+          (:img :src "/img/avatar/1.png")
+          (:img :src "/img/avatar/1.png")
+          (:img :src "/img/avatar/1.png")
+          )))))
 
 (define-easy-handler (portfolio :uri "/portfolio") (category)
   (fu-er-com::standard-page
