@@ -130,6 +130,10 @@
         :min-height "332px" ; TODO variable
         )
 
+       (".portfolio-article-link"
+        :color "inherit"
+        :text-decoration "none")
+
        (".portfolio-article-image"
         :float "left"
         :padding-right "30px")
