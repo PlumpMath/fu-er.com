@@ -173,9 +173,6 @@
 
        (".portfolio-overlay-article"
         )
-        ;:margin-top "50px"
-        ;:margin-left "70px"
-        ;:min-height "332px") ; TODO: variable
 
        (".portfolio-overlay-article-image-container"
         )
@@ -186,6 +183,7 @@
         :left "10%"
         :max-width "80%"
         :max-height "40%"
+        :margin-left "10px"
         )
 
        (".portfolio-overlay-article-text"
@@ -194,6 +192,7 @@
         :left "10%"
         :max-width "80%"
         :max-height "20%"
+        :margin-left "10px"
         :overflow "auto")
 
        (".portfolio-overlay-thumbs"
@@ -201,6 +200,7 @@
         :top "80%"
         :left "10%"
         :max-height "20%"
+        :margin-left "10px"
         :overflow "auto")
 
        (".portfolio-overlay-thumb"
