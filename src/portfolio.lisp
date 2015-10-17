@@ -50,18 +50,28 @@
       (:div
         :class "portfolio-overlay-modal"
         (:article
-          :class "portfolio-article"
-          (:img :class "portfolio-article-image"
-                :src "/img/portfolio/framed-placeholder.png")
-          (:h2 :class "portfolio-article-title" "Title")
-          (:p
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."))
+          :class "portfolio-overlay-article"
+          ;(:div :class "portfolio-overlay-article-image-container"
+            (:img :class "portfolio-overlay-article-image"
+                  :src "/img/non-portfolio/background.png")
+            ;)
+          ;(:h2 :class "portfolio-article-title" "Title")
+          (:p :class "portfolio-overlay-article-text"
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."
+            ))
         (:article
           :class "portfolio-overlay-thumbs"
-          (:img :src "/img/avatar/1.png")
-          (:img :src "/img/avatar/1.png")
-          (:img :src "/img/avatar/1.png")
-          (:img :src "/img/avatar/1.png")
+          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
+          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
+          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
+          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
+          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
+          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
+          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
+          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
+          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
+          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
+          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
           )))))
 
 (define-easy-handler (portfolio :uri "/portfolio") (category)

@@ -159,7 +159,7 @@
         :height "100%"
         :text-align "center"
         :z-index "11"
-        :background-color "grey")
+        :background-color "grey") ; TODO: image
 
        (".portfolio-overlay-modal"
         :width "80%"
@@ -171,9 +171,41 @@
         :padding "0px"
         :text-align "left")
 
+       (".portfolio-overlay-article"
+        )
+        ;:margin-top "50px"
+        ;:margin-left "70px"
+        ;:min-height "332px") ; TODO: variable
+
+       (".portfolio-overlay-article-image-container"
+        )
+
+       (".portfolio-overlay-article-image"
+        :position "absolute"
+        :top "20%"
+        :left "10%"
+        :max-width "80%"
+        :max-height "40%"
+        )
+
+       (".portfolio-overlay-article-text"
+        :position "absolute"
+        :top "60%"
+        :left "10%"
+        :max-width "80%"
+        :max-height "20%"
+        :overflow "auto")
+
        (".portfolio-overlay-thumbs"
-        :margin-top "50px"
-        :margin-left "70px")
+        :position "absolute"
+        :top "80%"
+        :left "10%"
+        :max-height "20%"
+        :overflow "auto")
+
+       (".portfolio-overlay-thumb"
+        :max-width "120px"
+        :max-height "90px")
 
        (".non-portfolio-content-background"
         :position "fixed"
