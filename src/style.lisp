@@ -159,7 +159,7 @@
         :height "100%"
         :text-align "center"
         :z-index "11"
-        :background-color "grey") ; TODO: image
+        :background-image "url(\"/img/portfolio/transparent-50.png\")") ; TODO: image
 
        (".portfolio-overlay-modal"
         :width "80%"
