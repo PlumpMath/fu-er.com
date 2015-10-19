@@ -9,7 +9,7 @@
     :author "jeaye"
     :licence "BSD"
     :description "Fu-Er's website"
-    :depends-on ("hunchentoot" "cl-who" "parenscript" "cl-css" "smackjack")
+    :depends-on ("hunchentoot" "cl-who" "parenscript" "cl-css" "iterate")
     :components ((:file "src/site"
                         :depends-on ("src/style"))
                  (:file "src/portfolio"

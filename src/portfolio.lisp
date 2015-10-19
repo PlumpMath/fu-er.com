@@ -1,5 +1,5 @@
 (defpackage :fu-er-com.portfolio
-  (:use :cl :hunchentoot :cl-who :parenscript))
+  (:use :cl :hunchentoot :cl-who :iterate))
 (in-package :fu-er-com.portfolio)
 
 (defun article (title link img description &optional rank)
@@ -52,15 +52,28 @@
 
 (defun art (category)
   (with-html-output-to-string (*standard-output* nil)
+    (let* ((lower-category (string-downcase category))
+           (web-path (format nil "/img/portfolio/~a/" lower-category))
+           (directories (directory (format nil "www/~a/*" web-path))))
+      (iterate (for direct in directories)
+               (for name = (first (last (pathname-directory direct))))
+               (for named-web-path = (format nil "~a~a" web-path name))
+               (for preview = (format nil "~a/preview.png" named-web-path))
+               (for full = (format nil "~a/full.png" named-web-path))
+               (for description = (format nil "~a/description" named-web-path))
+        (htm
+          (:img :class "portfolio-preview"
+                :src (str preview)))))
+
     (:div
       :class "portfolio-overlay"
       (:div
         :class "portfolio-overlay-modal"
         (:article
           :class "portfolio-overlay-article"
-          (:img :class "portfolio-overlay-article-image"
+          (:img :id "portfolio-overlay-article-image"
                 :src "/img/non-portfolio/background.png")
-          (:p :class "portfolio-overlay-article-text"
+          (:p :id "portfolio-overlay-article-text"
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."
             ))
         ))))

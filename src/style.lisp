@@ -174,10 +174,7 @@
        (".portfolio-overlay-article"
         )
 
-       (".portfolio-overlay-article-image-container"
-        )
-
-       (".portfolio-overlay-article-image"
+       ("#portfolio-overlay-article-image"
         :position "absolute"
         :top "20%"
         :left "10%"
@@ -186,7 +183,7 @@
         :margin-left "10px"
         )
 
-       (".portfolio-overlay-article-text"
+       ("#portfolio-overlay-article-text"
         :position "absolute"
         :top "80%"
         :left "10%"
