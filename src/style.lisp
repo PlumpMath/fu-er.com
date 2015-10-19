@@ -150,6 +150,15 @@
         :margin "0px"
         :padding "0px")
 
+       (".portfolio-preview-article"
+        :margin-top "50px"
+        :margin-left "70px")
+
+       (".portfolio-preview"
+        :border "3px solid"
+        :border-color "#e7e4d5"
+        :box-shadow "-3px 3px 5px #9f7459") ; TODO: vars
+
        (".portfolio-overlay"
         :visibility "hidden"
         :position "absolute"

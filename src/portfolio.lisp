@@ -52,18 +52,20 @@
 
 (defun art (category)
   (with-html-output-to-string (*standard-output* nil)
-    (let* ((lower-category (string-downcase category))
-           (web-path (format nil "/img/portfolio/~a/" lower-category))
-           (directories (directory (format nil "www/~a/*" web-path))))
-      (iterate (for direct in directories)
-               (for name = (first (last (pathname-directory direct))))
-               (for named-web-path = (format nil "~a~a" web-path name))
-               (for preview = (format nil "~a/preview.png" named-web-path))
-               (for full = (format nil "~a/full.png" named-web-path))
-               (for description = (format nil "~a/description" named-web-path))
-        (htm
-          (:img :class "portfolio-preview"
-                :src (str preview)))))
+    (htm
+      (:article :class "portfolio-preview-article"
+        (let* ((lower-category (string-downcase category))
+               (web-path (format nil "/img/portfolio/~a/" lower-category))
+               (directories (directory (format nil "www/~a/*" web-path))))
+          (iterate (for direct in directories)
+                   (for name = (first (last (pathname-directory direct))))
+                   (for named-web-path = (format nil "~a~a" web-path name))
+                   (for preview = (format nil "~a/preview.png" named-web-path))
+                   (for full = (format nil "~a/full.png" named-web-path))
+                   (for description = (format nil "~a/description" named-web-path))
+            (htm
+              (:img :class "portfolio-preview"
+                    :src (str preview)))))))
 
     (:div
       :class "portfolio-overlay"
