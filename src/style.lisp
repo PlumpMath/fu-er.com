@@ -127,8 +127,7 @@
        (".portfolio-article"
         :margin-top "50px"
         :margin-left "70px"
-        :min-height "332px" ; TODO variable
-        )
+        :min-height "332px") ; TODO variable
 
        (".portfolio-article-link"
         :color "inherit"
@@ -152,7 +151,7 @@
         :padding "0px")
 
        (".portfolio-overlay"
-        ;:visibility "hidden"
+        :visibility "hidden"
         :position "absolute"
         :left "0px"
         :top "0px"
@@ -160,16 +159,38 @@
         :height "100%"
         :text-align "center"
         :z-index "11"
-        :background-color "grey")
+        :background-image "url(\"/img/portfolio/transparent-50.png\")") ; TODO: image
 
        (".portfolio-overlay-modal"
         :width "80%"
+        :height "80%"
         :margin "100px auto" ; Centered
         :background-color ,global-background-color
         :border "1px solid"
         :border-color ,text-color
         :padding "0px"
         :text-align "left")
+
+       (".portfolio-overlay-article"
+        )
+
+       ("#portfolio-overlay-article-image"
+        :position "absolute"
+        :top "20%"
+        :left "10%"
+        :max-width "80%"
+        :max-height "60%"
+        :margin-left "10px"
+        )
+
+       ("#portfolio-overlay-article-text"
+        :position "absolute"
+        :top "80%"
+        :left "10%"
+        :max-width "80%"
+        :max-height "20%"
+        :margin-left "10px"
+        :overflow "auto")
 
        (".non-portfolio-content-background"
         :position "fixed"
