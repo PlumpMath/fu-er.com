@@ -64,20 +64,7 @@
           (:p :class "portfolio-overlay-article-text"
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."
             ))
-        (:article
-          :class "portfolio-overlay-thumbs"
-          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
-          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
-          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
-          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
-          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
-          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
-          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
-          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
-          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
-          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
-          (:img :class "portfolio-overlay-thumb" :src "/img/avatar/1.png")
-          )))))
+        ))))
 
 (define-easy-handler (portfolio :uri "/portfolio") (category)
   (fu-er-com::standard-page

@@ -182,30 +182,18 @@
         :top "20%"
         :left "10%"
         :max-width "80%"
-        :max-height "40%"
+        :max-height "60%"
         :margin-left "10px"
         )
 
        (".portfolio-overlay-article-text"
         :position "absolute"
-        :top "60%"
+        :top "80%"
         :left "10%"
         :max-width "80%"
         :max-height "20%"
         :margin-left "10px"
         :overflow "auto")
-
-       (".portfolio-overlay-thumbs"
-        :position "absolute"
-        :top "80%"
-        :left "10%"
-        :max-height "20%"
-        :margin-left "10px"
-        :overflow "auto")
-
-       (".portfolio-overlay-thumb"
-        :max-width "120px"
-        :max-height "90px")
 
        (".non-portfolio-content-background"
         :position "fixed"
