@@ -52,6 +52,10 @@
 
 (defun art (category)
   (with-html-output-to-string (*standard-output* nil)
+    (:script :type "text/javascript"
+      (str (parenscript:ps
+             (defun bark (preview)
+               (alert (parenscript:@ preview id))))))
     (htm
       (:article :class "portfolio-preview-article"
         (let* ((lower-category (string-downcase category))
@@ -65,7 +69,9 @@
                    (for description = (format nil "~a/description" named-web-path))
             (htm
               (:img :class "portfolio-preview"
-                    :src (str preview)))))))
+                    :id (str name)
+                    :src (str preview)
+                    :onclick (parenscript:ps-inline (bark this))))))))
 
     (:div
       :class "portfolio-overlay"

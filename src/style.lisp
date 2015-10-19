@@ -151,10 +151,12 @@
         :padding "0px")
 
        (".portfolio-preview-article"
-        :margin-top "50px"
-        :margin-left "70px")
+        :margin-top "30px"
+        :margin-left "50px")
 
        (".portfolio-preview"
+        :margin-top "20px"
+        :margin-left "20px"
         :border "3px solid"
         :border-color "#e7e4d5"
         :box-shadow "-3px 3px 5px #9f7459") ; TODO: vars
