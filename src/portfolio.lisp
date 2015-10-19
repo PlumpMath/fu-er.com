@@ -60,7 +60,6 @@
           :class "portfolio-overlay-article"
           (:img :class "portfolio-overlay-article-image"
                 :src "/img/non-portfolio/background.png")
-          ;(:h2 :class "portfolio-article-title" "Title")
           (:p :class "portfolio-overlay-article-text"
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."
             ))

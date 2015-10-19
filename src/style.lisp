@@ -151,7 +151,7 @@
         :padding "0px")
 
        (".portfolio-overlay"
-        ;:visibility "hidden"
+        :visibility "hidden"
         :position "absolute"
         :left "0px"
         :top "0px"
