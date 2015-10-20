@@ -13,6 +13,7 @@
   (with-html-output-to-string (*standard-output* nil)
     (htm
       (:div :class "sidebar sidebar-nav-text"
+            :id "sidebar"
        (:div :class "sidebar-banner"
         (:a :href "/"
           (:img :class "sidebar-banner-image"

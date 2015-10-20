@@ -164,44 +164,44 @@
        (".portfolio-overlay"
         :visibility "hidden"
         :position "absolute"
-        :left "0px"
         :top "0px"
+        :left "0px"
         :width "100%"
         :height "100%"
         :text-align "center"
         :z-index "11"
-        :background-image "url(\"/img/portfolio/transparent-50.png\")") ; TODO: image
+        :background-image "url(\"/img/scrim.png\")") ; TODO: image
 
        (".portfolio-overlay-modal"
-        :width "80%"
-        :height "80%"
-        :margin "100px auto" ; Centered
+        :position "absolute"
+        :top "5%"
+        :left "5%"
+        :width "90%"
+        :height "90%"
         :background-color ,global-background-color
         :border "1px solid"
         :border-color ,text-color
         :padding "0px"
         :text-align "left")
 
-       (".portfolio-overlay-article"
-        )
-
        ("#portfolio-overlay-article-image"
         :position "absolute"
-        :top "20%"
-        :left "10%"
+        :top "0%"
+        :left "0%"
+        :margin-top "20px"
+        :margin-left "20px"
         :max-width "80%"
-        :max-height "60%"
-        :margin-left "10px"
+        :max-height "80%"
         )
 
        ("#portfolio-overlay-article-text"
         :position "absolute"
         :top "80%"
-        :left "10%"
+        :left "0%"
         :max-width "80%"
         :max-height "20%"
-        :margin-left "10px"
-        :overflow "auto")
+        :margin-left "20px"
+        :overflow "hidden")
 
        (".non-portfolio-content-background"
         :position "fixed"

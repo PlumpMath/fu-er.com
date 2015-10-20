@@ -97,13 +97,11 @@
       :id "portfolio-overlay"
       (:div
         :class "portfolio-overlay-modal"
-        (:article
-          :class "portfolio-overlay-article"
-          (:img :id "portfolio-overlay-article-image"
-                :src "/img/non-portfolio/background.png")
-          (:p :id "portfolio-overlay-article-text"
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."
-            ))
+        (:img :id "portfolio-overlay-article-image"
+              :src "/img/non-portfolio/background.png")
+        (:p :id "portfolio-overlay-article-text"
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."
+          )
         ))))
 
 (define-easy-handler (portfolio :uri "/portfolio") (category)
