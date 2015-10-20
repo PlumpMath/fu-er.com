@@ -2,6 +2,12 @@
   (:use :cl :hunchentoot :cl-who :iterate))
 (in-package :fu-er-com.portfolio)
 
+(defun file-string (path)
+  (with-open-file (stream path)
+    (let ((data (make-string (file-length stream))))
+      (read-sequence data stream)
+      data)))
+
 (defun article (title link img description &optional rank)
   (with-html-output-to-string (*standard-output* nil)
     (:a
@@ -54,8 +60,18 @@
   (with-html-output-to-string (*standard-output* nil)
     (:script :type "text/javascript"
       (str (parenscript:ps
-             (defun bark (preview)
-               (alert (parenscript:@ preview id))))))
+             (defun show-overlay (name full description)
+               (let ((overlay (parenscript:chain document
+                                                 (get-element-by-id "portfolio-overlay")))
+                     (image (parenscript:chain document
+                                               (get-element-by-id "portfolio-overlay-article-image")))
+                     (text (parenscript:chain document
+                                              (get-element-by-id "portfolio-overlay-article-text"))))
+                 (setf (parenscript:@ overlay style visibility) "visible")
+                 (setf (parenscript:@ image src) full)
+                 (setf (parenscript:@ text inner-h-t-m-l) description)
+                 )))))
+
     (htm
       (:article :class "portfolio-preview-article"
         (let* ((lower-category (string-downcase category))
@@ -66,15 +82,19 @@
                    (for named-web-path = (format nil "~a~a" web-path name))
                    (for preview = (format nil "~a/preview.png" named-web-path))
                    (for full = (format nil "~a/full.png" named-web-path))
-                   (for description = (format nil "~a/description" named-web-path))
+                   (for description = (file-string (format nil
+                                                           "www/~a/description"
+                                                           named-web-path)))
             (htm
               (:img :class "portfolio-preview"
                     :id (str name)
                     :src (str preview)
-                    :onclick (parenscript:ps-inline (bark this))))))))
+                    :onclick (parenscript:ps-inline*
+                               `(show-overlay ,name ,full ,description))))))))
 
     (:div
       :class "portfolio-overlay"
+      :id "portfolio-overlay"
       (:div
         :class "portfolio-overlay-modal"
         (:article
